@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 8: Integración con Propósito - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .integration-card {
+            transition: all 0.4s ease;
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+        }
+        .integration-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .planning-step {
+            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+            border-left: 4px solid #ea580c;
+        }
+        .future-vision {
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+            border: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-red-600 hover:text-red-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 8 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-red-400 to-red-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">8</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Integración con Propósito</h1>
+            <p class="text-xl opacity-90">Diseñando un Plan para Crear Clases Creando el Futuro Fantástico</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: ASOCIACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-red-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes aprenderán a integrar todos los conocimientos adquiridos para crear un plan maestro 
+                    de desarrollo de software educativo. Diseñarán una plataforma integral que combine apps, juegos y 
+                    herramientas educativas, creando un ecosistema tecnológico que prepare a futuras generaciones 
+                    para construir un mundo más sostenible y tecnológicamente avanzado.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas de Planificación:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                            <span>Todos los proyectos de Scratch anteriores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                            <span>Plantillas de planificación de proyectos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                            <span>Herramientas de mapas mentales</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Recursos de Visión Futura:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Ejemplos de plataformas educativas exitosas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Tendencias tecnológicas emergentes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Objetivos de Desarrollo Sostenible (ODS)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Análisis de Integración de Proyectos Anteriores</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Inventario de proyectos desarrollados:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="integration-card p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🎮 Proyectos de Juegos</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Laberinto Ecológico (Clase 3)</li>
+                                <li>• EcoAventura (Clase 4)</li>
+                                <li>• Juegos de la EcoRadio (Clase 5)</li>
+                            </ul>
+                        </div>
+                        <div class="integration-card p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">📱 Proyectos de Apps</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• EcoCalculadora (Clase 2)</li>
+                                <li>• EcoEmprendedor (Clase 6)</li>
+                                <li>• EvaluadorApp (Clase 7)</li>
+                            </ul>
+                        </div>
+                        <div class="integration-card p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">🎨 Proyectos de Diseño</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• EcoRadio Interactiva (Clase 5)</li>
+                                <li>• Galería de Diseño (Clase 5)</li>
+                                <li>• Interfaces de Usuario (Todas las clases)</li>
+                            </ul>
+                        </div>
+                        <div class="integration-card p-4 rounded-lg border-l-4 border-orange-400">
+                            <h5 class="font-medium text-orange-600 mb-2">🤝 Proyectos Colaborativos</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Sistema de Feedback (Clase 7)</li>
+                                <li>• Testing Colaborativo (Clase 7)</li>
+                                <li>• Mejoras en Equipo (Clase 7)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Diseñando la Plataforma "EcoTech Academy"</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Arquitectura de la plataforma educativa integral:</h4>
+                    <div class="future-vision p-6 rounded-lg mb-4">
+                        <h5 class="font-medium text-blue-800 mb-3">🏗️ Estructura de EcoTech Academy:</h5>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-green-600 mb-2">Módulo de Aprendizaje</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Lecciones interactivas</li>
+                                    <li>• Tutoriales paso a paso</li>
+                                    <li>• Evaluaciones automáticas</li>
+                                    <li>• Progreso personalizado</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-blue-600 mb-2">Módulo de Creación</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Editor de proyectos integrado</li>
+                                    <li>• Plantillas prediseñadas</li>
+                                    <li>• Herramientas de colaboración</li>
+                                    <li>• Galería de recursos</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-purple-600 mb-2">Módulo Social</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Comunidad de estudiantes</li>
+                                    <li>• Sistema de mentorías</li>
+                                    <li>• Competencias y desafíos</li>
+                                    <li>• Showcase de proyectos</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-orange-600 mb-2">Módulo de Impacto</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Métricas de sostenibilidad</li>
+                                    <li>• Proyectos de impacto real</li>
+                                    <li>• Conexión con ONGs</li>
+                                    <li>• Certificaciones verdes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Diagrama de arquitectura de EcoTech Academy con sus 4 módulos interconectados]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Creando el Prototipo en Scratch</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Proyecto: "EcoTech Academy - Prototipo"</h4>
+                    <div class="planning-step p-4 rounded-lg mb-4">
+                        <h5 class="font-medium mb-2">Configuración del proyecto principal:</h5>
+                        <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                            <li>Crea un nuevo proyecto llamado "EcoTech-Academy"</li>
+                            <li>Diseña la pantalla principal con navegación a 4 módulos</li>
+                            <li>Crea sprites para cada módulo (Aprender, Crear, Social, Impacto)</li>
+                            <li>Implementa un sistema de usuario con perfil personalizable</li>
+                            <li>Integra elementos de todos los proyectos anteriores</li>
+                        </ol>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de navegación principal:</h5>
+                        <div class="space-y-2 text-sm">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block scratch-looks">cambiar fondo a PantallaPrincipal</span><br>
+                            <span class="scratch-block scratch-looks">decir ¡Bienvenida a EcoTech Academy! por 3 segundos</span><br>
+                            <span class="scratch-block">fijar UsuarioActivo a Invitada</span><br>
+                            <span class="scratch-block">fijar ProyectosCompletados a 0</span><br>
+                            <span class="scratch-block">fijar ImpactoEcológico a 0</span><br>
+                            <br>
+                            <span class="scratch-block scratch-event">al hacer clic en ModuloAprender</span><br>
+                            <span class="scratch-block scratch-looks">cambiar fondo a PantallaAprendizaje</span><br>
+                            <span class="scratch-block scratch-looks">decir Accediendo a lecciones interactivas... por 2 segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Implementando el Sistema de Progreso Integral</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Dashboard de progreso del estudiante:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">📊 Métricas de Aprendizaje:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Lecciones completadas</li>
+                                <li>• Proyectos creados</li>
+                                <li>• Habilidades desarrolladas</li>
+                                <li>• Tiempo de práctica</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">🌍 Métricas de Impacto:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• CO2 ahorrado (simulado)</li>
+                                <li>• Personas impactadas</li>
+                                <li>• Proyectos ecológicos</li>
+                                <li>• Colaboraciones realizadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de logros y certificaciones:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al completar proyecto</span><br>
+                            <span class="scratch-block">cambiar ProyectosCompletados por 1</span><br>
+                            <span class="scratch-block">cambiar ImpactoEcológico por 50</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">ProyectosCompletados = 5</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir ¡Felicidades! Desbloqueaste: Desarrolladora Junior por 4 segundos</span><br>
+                                <span class="scratch-block">añadir Desarrolladora Junior a ListaLogros</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Creando el Plan de Expansión Futura</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Roadmap de desarrollo a largo plazo:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">📅 Fase 1: Fundación (Meses 1-6)</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Completar prototipo en Scratch</li>
+                                <li>• Crear 20 lecciones interactivas</li>
+                                <li>• Establecer comunidad inicial de 100 estudiantes</li>
+                                <li>• Desarrollar sistema de mentorías</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🚀 Fase 2: Expansión (Meses 7-12)</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Migrar a plataforma web profesional</li>
+                                <li>• Añadir 50 lecciones más</li>
+                                <li>• Integrar herramientas de IA para personalización</li>
+                                <li>• Lanzar programa de certificaciones</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">🌟 Fase 3: Impacto Global (Año 2+)</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Expandir a múltiples idiomas</li>
+                                <li>• Crear alianzas con escuelas internacionales</li>
+                                <li>• Desarrollar app móvil nativa</li>
+                                <li>• Implementar proyectos de impacto real</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Diseñando el Currículo del Futuro</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Estructura curricular para formar líderes tecnológicas:</h4>
+                    <div class="future-vision p-6 rounded-lg">
+                        <h5 class="font-medium text-blue-800 mb-3">🎓 Currículo EcoTech Academy:</h5>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-green-600 mb-2">Nivel Principiante (3 meses)</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Fundamentos de programación</li>
+                                    <li>• Pensamiento computacional</li>
+                                    <li>• Diseño de interfaces básicas</li>
+                                    <li>• Conciencia ambiental digital</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-blue-600 mb-2">Nivel Intermedio (6 meses)</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Desarrollo de aplicaciones</li>
+                                    <li>• Programación orientada a objetos</li>
+                                    <li>• Bases de datos y APIs</li>
+                                    <li>• Proyectos colaborativos</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-purple-600 mb-2">Nivel Avanzado (9 meses)</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Inteligencia artificial ética</li>
+                                    <li>• Desarrollo de videojuegos</li>
+                                    <li>• Emprendimiento tecnológico</li>
+                                    <li>• Liderazgo en tecnología</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-orange-600 mb-2">Nivel Experto (12 meses)</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Investigación y desarrollo</li>
+                                    <li>• Mentoría de nuevas estudiantes</li>
+                                    <li>• Proyectos de impacto social</li>
+                                    <li>• Preparación profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Planificación Estratégica</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Define objetivos claros y medibles</li>
+                            <li>• Considera recursos disponibles</li>
+                            <li>• Planifica en fases incrementales</li>
+                            <li>• Incluye métricas de éxito</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Visión de Futuro</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Piensa en el impacto a largo plazo</li>
+                            <li>• Considera tendencias tecnológicas</li>
+                            <li>• Mantén flexibilidad para adaptarte</li>
+                            <li>• Involucra a tu comunidad en la visión</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-red-800 mb-3">🌟 Creando el Futuro</h3>
+                <p class="text-red-700">
+                    La integración con propósito significa conectar todo lo que has aprendido para crear algo más grande 
+                    que la suma de sus partes. Tu plataforma EcoTech Academy no es solo un proyecto escolar, es el 
+                    prototipo de una herramienta que podría transformar la educación tecnológica. Cada línea de código 
+                    que escribes hoy puede inspirar a miles de futuras programadoras mañana.
+                </p>
+            </div>
+        </section>
+
+        <!--

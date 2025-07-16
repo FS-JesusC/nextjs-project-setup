@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12: La Idea Una Oro - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .golden-card {
+            transition: all 0.5s ease;
+            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+            border: 3px solid #f59e0b;
+        }
+        .golden-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 30px 60px -12px rgba(245, 158, 11, 0.4);
+        }
+        .final-showcase {
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+            border: 2px solid #3b82f6;
+        }
+        .celebration {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            border-left: 4px solid #ec4899;
+        }
+        .future-vision {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #10b981;
+        }
+        .sparkle {
+            animation: sparkle 2s infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-violet-600 hover:text-violet-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 12 de 12 - ¡FINAL!</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-violet-400 to-violet-600 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 sparkle">
+                <span class="text-4xl font-bold">12</span>
+            </div>
+            <h1 class="text-5xl font-bold mb-4">La Idea Una Oro</h1>
+            <p class="text-2xl opacity-90 mb-4">Presentando las Herramientas y Habilidades Fantásticas</p>
+            <div class="mt-8 inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-3">
+                <span class="text-lg font-medium">Fase: EXPRESIÓN FINAL</span>
+            </div>
+            <div class="mt-6">
+                <span class="text-lg opacity-90">🎉 ¡Felicidades por completar el programa ECOTECH! 🎉</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-violet-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase Final
+            </h2>
+            <div class="bg-violet-50 border-l-4 border-violet-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    En esta clase culminante, los estudiantes presentarán sus proyectos más destacados, reflexionarán 
+                    sobre su crecimiento como desarrolladoras, y crearán un portafolio digital que demuestre todas las 
+                    habilidades adquiridas. Celebraremos los logros alcanzados y trazaremos el camino hacia el futuro 
+                    como líderes tecnológicas comprometidas con la sostenibilidad.
+                </p>
+            </div>
+        </section>
+
+        <!-- Celebración de Logros -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">🏆</span>
+                </div>
+                Celebrando tu Transformación
+            </h2>
+            <div class="celebration p-6 rounded-lg mb-6">
+                <h3 class="text-xl font-semibold text-pink-800 mb-4">🌟 De Principiante a Desarrolladora Experta</h3>
+                <p class="text-gray-700 mb-4">
+                    Has recorrido un camino extraordinario. Comenzaste sin conocer qué era Scratch y ahora eres capaz de 
+                    crear aplicaciones complejas, videojuegos educativos y soluciones tecnológicas que impactan positivamente 
+                    el mundo. ¡Eso es verdaderamente oro!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="golden-card p-6 rounded-lg">
+                        <h4 class="font-semibold text-amber-800 mb-3">🎓 Habilidades Técnicas Dominadas:</h4>
+                        <ul class="text-sm text-amber-700 space-y-2">
+                            <li>✨ Programación visual avanzada en Scratch</li>
+                            <li>✨ Diseño de interfaces de usuario intuitivas</li>
+                            <li>✨ Desarrollo de aplicaciones multifuncionales</li>
+                            <li>✨ Creación de videojuegos educativos</li>
+                            <li>✨ Implementación de sistemas multilingües</li>
+                            <li>✨ Integración de datos y métricas ambientales</li>
+                        </ul>
+                    </div>
+                    <div class="golden-card p-6 rounded-lg">
+                        <h4 class="font-semibold text-amber-800 mb-3">💎 Habilidades de Vida Desarrolladas:</h4>
+                        <ul class="text-sm text-amber-700 space-y-2">
+                            <li>✨ Pensamiento computacional y lógico</li>
+                            <li>✨ Resolución creativa de problemas</li>
+                            <li>✨ Trabajo colaborativo y liderazgo</li>
+                            <li>✨ Comunicación efectiva de ideas</li>
+                            <li>✨ Conciencia ambiental y sostenibilidad</li>
+                            <li>✨ Visión emprendedora y de impacto social</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portafolio Digital -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">💼</span>
+                </div>
+                Creando tu Portafolio Digital "EcoTech Showcase"
+            </h2>
+
+            <!-- Proyecto Final -->
+            <div class="final-showcase p-6 rounded-lg mb-6">
+                <h3 class="text-xl font-semibold text-blue-800 mb-4">🚀 Proyecto Final: Tu Portafolio Interactivo</h3>
+                <p class="text-gray-700 mb-4">
+                    Crea una aplicación en Scratch que funcione como tu portafolio personal, mostrando todos tus proyectos, 
+                    logros y el impacto ambiental que has generado a través de la tecnología.
+                </p>
+                
+                <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mb-4">
+                    <h4 class="font-medium mb-3">Estructura del Portafolio "EcoTech-Showcase":</h4>
+                    <div class="space-y-2 text-sm">
+                        <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                        <span class="scratch-block scratch-looks">cambiar fondo a PortadaPortafolio</span><br>
+                        <span class="scratch-block scratch-looks">decir ¡Bienvenidos a mi Portafolio EcoTech! por 3 segundos</span><br>
+                        <span class="scratch-block">fijar SeccionActual a Inicio</span><br>
+                        <span class="scratch-block">fijar ProyectosMostrados a 0</span><br>
+                        <span class="scratch-block">fijar ImpactoTotal a 0</span><br>
+                        <br>
+                        <span class="scratch-block scratch-event">al hacer clic en MenuProyectos</span><br>
+                        <span class="scratch-block">fijar SeccionActual a Proyectos</span><br>
+                        <span class="scratch-block scratch-looks">cambiar fondo a GaleriaProyectos</span><br>
+                        <span class="scratch-block scratch-looks">decir Explorando mis 12 proyectos ECOTECH por 2 segundos</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                        <h5 class="font-medium text-green-600 mb-2">📱 Secciones del Portafolio:</h5>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Página de inicio con presentación personal</li>
+                            <li>• Galería interactiva de 12 proyectos</li>
+                            <li>• Dashboard de impacto ambiental</li>
+                            <li>• Línea de tiempo de aprendizaje</li>
+                            <li>• Certificaciones y logros obtenidos</li>
+                            <li>• Visión futura y próximos proyectos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-purple-400">
+                        <h5 class="font-medium text-purple-600 mb-2">✨ Características Especiales:</h5>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Navegación intuitiva entre secciones</li>
+                            <li>• Animaciones y transiciones suaves</li>
+                            <li>• Contador de impacto ambiental en tiempo real</li>
+                            <li>• Sistema de comentarios para visitantes</li>
+                            <li>• Exportador de CV tecnológico</li>
+                            <li>• Integración con redes sociales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto Final -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Crear tu Showcase Final
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-violet-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Recopilación y Organización de Proyectos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Inventario completo de tu viaje ECOTECH:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">📋 Lista de Proyectos Completados:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>1. Primer programa "Hola Mundo"</li>
+                                <li>2. EcoCalculadora de huella de carbono</li>
+                                <li>3. Laberinto Ecológico</li>
+                                <li>4. EcoAventura con múltiples mundos</li>
+                                <li>5. EcoRadio Interactiva</li>
+                                <li>6. Simulador EcoEmprendedor</li>
+                                <li>7. Sistema EvaluadorApp</li>
+                                <li>8. Prototipo EcoTech Academy</li>
+                                <li>9. EcoLearn - Plataforma Gamificada</li>
+                                <li>10. EcoFamilia - Juego Cooperativo</li>
+                                <li>11. EcoEvidence - Documentador Multilingüe</li>
+                                <li>12. EcoTech Showcase - Portafolio Final</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">📊 Métricas de Impacto:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Líneas de código escritas: +5,000</li>
+                                <li>• Horas de programación: +100</li>
+                                <li>• Problemas resueltos: +50</li>
+                                <li>• Personas impactadas: +200</li>
+                                <li>• CO2 ahorrado (simulado): +1,000 kg</li>
+                                <li>• Proyectos colaborativos: +15</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Diseñando la Experiencia de Usuario</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Creando una navegación intuitiva y atractiva:</h4>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mb-4">
+                        <h5 class="font-medium mb-2">Sistema de navegación principal:</h5>
+                        <div class="space-y-2 text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en BotonSobreMi</span><br>
+                            <span class="scratch-block scratch-looks">cambiar fondo a PaginaSobreMi</span><br>
+                            <span class="scratch-block scratch-looks">decir Soy [Tu Nombre], desarrolladora ECOTECH por 3 segundos</span><br>
+                            <span class="scratch-block scratch-looks">decir Mi misión: Crear tecnología que cuide nuestro planeta por 4 segundos</span><br>
+                            <br>
+                            <span class="scratch-block scratch-event">al hacer clic en BotonImpacto</span><br>
+                            <span class="scratch-block scratch-looks">cambiar fondo a DashboardImpacto</span><br>
+                            <span class="scratch-block">fijar ImpactoMostrado a suma de ListaImpactoProyectos</span><br>
+                            <span class="scratch-block scratch-looks">decir unir Mi impacto total: ImpactoMostrado acciones ecológicas por 4 segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Implementando la Galería Interactiva</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Showcase dinámico de todos tus proyectos:</h4>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de presentación de proyectos:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en ProyectoEcoCalculadora</span><br>
+                            <span class="scratch-block scratch-looks">cambiar disfraz a DemoEcoCalculadora</span><br>
+                            <span class="scratch-block scratch-looks">decir EcoCalculadora - Mi primera app ambiental por 3 segundos</span><br>
+                            <span class="scratch-block scratch-looks">decir Calcula tu huella de carbono y descubre cómo reducirla por 4 segundos</span><br>
+                            <span class="scratch-block scratch-sound">tocar sonido DemostracionApp</span><br>
+                            <span class="scratch-block">cambiar ProyectosMostrados por 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-orange-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Creando tu Manifiesto Tecnológico</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Tu visión como desarrolladora del futuro:</h4>
+                    <div class="future-vision p-6 rounded-lg">
+                        <h5 class="font-medium text-green-800 mb-3">🌍 Mi Manifiesto como Desarrolladora ECOTECH:</h5>
+                        <div class="space-y-4 text-gray-700">
+                            <p><strong>"Creo en el poder de la tecnología para sanar nuestro planeta."</strong></p>
+                            <p>Como desarrolladora ECOTECH, me comprometo a:</p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Crear código que genere impacto positivo en el medio ambiente</li>
+                                <li>Diseñar aplicaciones accesibles e inclusivas para todas las personas</li>
+                                <li>Colaborar con comunidades globales para resolver desafíos ambientales</li>
+                                <li>Enseñar y inspirar a la próxima generación de programadoras</li>
+                                <li>Innovar constantemente buscando soluciones sostenibles</li>
+                                <li>Usar mi voz y habilidades para defender nuestro planeta</li>
+                            </ul>
+                            <p><strong>"El futuro es verde, digital y está en nuestras manos."</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificación y Reconocimiento -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">🏅</span>
+                </div>
+                Tu Certificación ECOTECH
+            </h2>
+            <div class="golden-card p-8 rounded-lg text-center">
+                <h3 class="text-2xl font-bold text-amber-800 mb-4">🎓 CERTIFICADO DE EXCELENCIA ECOTECH 🎓</h3>
+                <div class="bg-white bg-opacity-50 rounded-lg p-6 mb-4">
+                    <p class="text-lg text-amber-900 mb-2">Se certifica que</p>
+                    <p class="text-3xl font-bold text-amber-800 mb-2">[TU NOMBRE]</p>
+                    <p class="text-lg text-amber-900 mb-4">ha completado exitosamente el programa</p>
+                    <p class="text-2xl font-bold text-amber-800 mb-4">DESARROLLADORA ECOTECH</p>
+                    <p class="text-base text-amber-700">
+                        Demostrando excelencia en programación, diseño de aplicaciones ecológicas, 
+                        liderazgo colaborativo y compromiso con la sostenibilidad ambiental.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                        <p class="font-semibold">Proyectos Completados</p>
+                        <p class="text-2xl font-bold">12/12</p>
+                    </div>
+                    <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                        <p class="font-semibold">Habilidades Dominadas</p>
+                        <p class="text-2xl font-bold">25+</p>
+                    </div>
+                    <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                        <p class="font-semibold">Impacto Generado</p>
+                        <p class="text-2xl font-bold">∞</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Próximos Pasos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 font-bold text-sm">🚀</span>
+                </div>
+                Tu Futuro como Líder Tecnológica
+            </h2>
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-4">🌟 Oportunidades que te Esperan:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-purple-600 mb-3">🎓 Educación Avanzada:</h4>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>• Cursos de programación profesional</li>
+                                <li>• Carreras en ingeniería de software</li>
+                                <li>• Especializaciones en sostenibilidad</li>
+                                <li>• Programas de liderazgo tecnológico</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-pink-600 mb-3">💼 Oportunidades Profesionales:</h4>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li>• Desarrolladora de aplicaciones móviles</li>
+                                <li>• Consultora en tecnología verde</li>
+                                <li>• Emprendedora de startups sostenibles</li>
+                                <li>• Educadora en programación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-green-800 mb-4">🌍 Tu Misión Continúa:</h3>
+                    <p class="text-gray-700 mb-4">
+                        Como graduada ECOTECH, tienes la responsabilidad y el privilegio de usar tus habilidades 
+                        para crear un mundo mejor. Cada línea de código que escribas, cada aplicación que diseñes, 
+                        cada problema que resuelvas, puede contribuir a sanar nuestro planeta.
+                    </p>
+                    <div class="bg-white rounded-lg p-4">
+                        <h4 class="font-medium text-blue-600 mb-2">💡 Recuerda siempre:</h4>
+                        <p class="text-gray-700 italic">
+                            "No eres solo una programadora, eres una arquitecta del futuro. 
+                            Tu código puede cambiar el mundo, una aplicación a la vez."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mensaje Final -->
+        <section class="bg-gradient-to-br from-violet-100 to-purple-100 rounded-xl shadow-lg p-8 mb-8 text-center">
+            <h2 class="text-3xl font-bold text-violet-800 mb-6">🎉 ¡FELICIDADES, DESARROLLADORA ECOTECH! 🎉</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 mb-6">
+                    Has completado un viaje extraordinario de 12 clases, creando proyectos increíbles y desarrollando 
+                    habilidades que te acompañarán toda la vida. Pero esto no es el final, ¡es solo el comienzo!
+                </p>
+                <div class="bg-white rounded-lg p-6 mb-6">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-4">Tu Legado ECOTECH:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="sparkle">
+                            <div class="text-3xl mb-2">🌱</div>
+                            <p class="font-semibold">Impacto Ambiental</p>
+                            <p class="text-sm text-gray-600">Proyectos que cuidan el planeta</p>
+                        </div>
+                        <div class="sparkle">
+                            <div class="text-3xl mb-2">💻</div>
+                            <p class="font-semibold">Excelencia Técnica</p>
+                            <p class

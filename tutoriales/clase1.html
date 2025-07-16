@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1: ¿Qué es Scratch? - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 1 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-blue-400 to-blue-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">1</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">¿Qué es Scratch?</h1>
+            <p class="text-xl opacity-90">Planificación inicial del Software y exploración de Scratch</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: OBSERVACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Al finalizar esta clase, los estudiantes comprenderán qué es Scratch, sus características principales, 
+                    y cómo esta herramienta les permitirá crear sus propios programas de manera visual e intuitiva. 
+                    Realizarán su primera planificación de software y explorarán el entorno de programación.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Tecnológicos:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span>Computadora o tablet con conexión a internet</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span>Navegador web actualizado (Chrome, Firefox, Safari)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span>Cuenta en Scratch (scratch.mit.edu)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Físicos:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Cuaderno para planificación</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Lápices de colores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Papel para bocetos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Introducción a Scratch</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">¿Qué es Scratch?</h4>
+                    <p class="text-gray-700 mb-4">
+                        Scratch es un lenguaje de programación visual desarrollado por el MIT que permite crear 
+                        historias interactivas, juegos y animaciones usando bloques de código que se conectan como piezas de rompecabezas.
+                    </p>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Interfaz principal de Scratch con sus diferentes secciones]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Explorar la Interfaz</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Componentes principales:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">Escenario</h5>
+                            <p class="text-sm text-gray-600">Donde se ejecuta tu programa y ves los resultados</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">Lista de Sprites</h5>
+                            <p class="text-sm text-gray-600">Personajes y objetos de tu proyecto</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-purple-600 mb-2">Paleta de Bloques</h5>
+                            <p class="text-sm text-gray-600">Comandos organizados por categorías</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-orange-600 mb-2">Área de Scripts</h5>
+                            <p class="text-sm text-gray-600">Donde arrastras y conectas los bloques</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Conocer los Tipos de Bloques</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Categorías de bloques en Scratch:</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span>
+                            <span class="ml-4 text-gray-600">Eventos - Inician acciones</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="scratch-block scratch-motion">mover 10 pasos</span>
+                            <span class="ml-4 text-gray-600">Movimiento - Controlan posición</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="scratch-block scratch-looks">decir Hola por 2 segundos</span>
+                            <span class="ml-4 text-gray-600">Apariencia - Cambian aspecto</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="scratch-block scratch-sound">tocar sonido meow</span>
+                            <span class="ml-4 text-gray-600">Sonido - Reproducen audio</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="scratch-block scratch-control">repetir 10</span>
+                            <span class="ml-4 text-gray-600">Control - Estructuras de repetición</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Primer Programa - "Hola Mundo"</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Crear tu primer programa:</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                        <li>Abre Scratch en tu navegador (scratch.mit.edu)</li>
+                        <li>Haz clic en "Crear" para empezar un nuevo proyecto</li>
+                        <li>Arrastra el bloque <span class="scratch-block scratch-event">al presionar bandera verde</span></li>
+                        <li>Conecta el bloque <span class="scratch-block scratch-looks">decir Hola por 2 segundos</span></li>
+                        <li>Haz clic en la bandera verde para ejecutar</li>
+                    </ol>
+                    <div class="mt-4 bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Bloques conectados del programa "Hola Mundo"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Planificación de tu Primer Proyecto</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Ejercicio de planificación:</h4>
+                    <p class="text-gray-700 mb-4">
+                        En tu cuaderno, dibuja y planifica un proyecto simple que incluya:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium mb-2">🎭 Personaje principal</h5>
+                            <p class="text-sm text-gray-600">¿Qué sprite usarás? ¿Cómo se verá?</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium mb-2">🎬 Acción simple</h5>
+                            <p class="text-sm text-gray-600">¿Qué hará tu personaje? (moverse, hablar, cambiar)</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium mb-2">🎨 Escenario</h5>
+                            <p class="text-sm text-gray-600">¿Dónde ocurrirá la acción?</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium mb-2">🎵 Sonidos</h5>
+                            <p class="text-sm text-gray-600">¿Qué sonidos incluirás?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Buenas Prácticas</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Guarda tu proyecto frecuentemente</li>
+                            <li>• Usa nombres descriptivos para tus proyectos</li>
+                            <li>• Experimenta con diferentes bloques</li>
+                            <li>• No tengas miedo de cometer errores</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Consejos de Aprendizaje</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Comienza con proyectos simples</li>
+                            <li>• Observa proyectos de otros usuarios</li>
+                            <li>• Practica conectando bloques diferentes</li>
+                            <li>• Planifica antes de programar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-orange-800 mb-3">🌟 Reflexión Final</h3>
+                <p class="text-orange-700">
+                    Recuerda que programar es como aprender un nuevo idioma. Al principio puede parecer confuso, 
+                    pero con práctica y paciencia, pronto estarás creando proyectos increíbles. 
+                    ¡La programación es una herramienta poderosa para expresar tu creatividad!
+                </p>
+            </div>
+        </section>
+
+        <!-- Actividad Extra -->
+        <section class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 font-bold text-sm">🎮</span>
+                </div>
+                Actividad Extra: Exploración Libre
+            </h2>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Desafío para casa:</h3>
+                <p class="text-gray-700 mb-4">
+                    Explora la galería de proyectos en Scratch y encuentra 3 proyectos que te gusten. 
+                    Para cada uno, identifica:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                    <li>¿Qué hace el proyecto?</li>
+                    <li>¿Qué tipos de bloques crees que usa?</li>
+                    <li>¿Qué te gusta más de él?</li>
+                    <li>¿Cómo podrías mejorarlo?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="../index.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Volver al Inicio
+            </a>
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">Clase 1 de 12</p>
+                <div class="w-48 bg-gray-200 rounded-full h-2 mt-2">
+                    <div class="bg-blue-600 h-2 rounded-full" style="width: 8.33%"></div>
+                </div>
+            </div>
+            <a href="clase2.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Siguiente Clase →
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Centro de Interés ECOTECH - Clase 1: ¿Qué es Scratch?</p>
+        </div>
+    </footer>
+</body>
+</html>

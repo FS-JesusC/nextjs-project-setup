@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4: ¿Qué Aventuras? - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .adventure-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .adventure-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-orange-600 hover:text-orange-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 4 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-orange-400 to-orange-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">4</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">¿Qué Aventuras?</h1>
+            <p class="text-xl opacity-90">Creando Juegos de Aventuras con Mapas Digitales y Secretos Escondidos</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: OBSERVACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-orange-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes diseñarán y programarán un juego de aventuras interactivo que incluya mapas digitales, 
+                    exploración de diferentes escenarios, recolección de objetos secretos y misiones ecológicas. 
+                    Aprenderán a crear narrativas digitales y sistemas de progresión en sus juegos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Tecnológicos:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                            <span>Scratch con múltiples fondos disponibles</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                            <span>Sprites de personajes y objetos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                            <span>Sonidos de ambiente y efectos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Creativos:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Papel para diseñar mapas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Ideas para la historia de aventura</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Lista de objetos secretos a incluir</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-orange-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Diseñando la Aventura Ecológica</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Tipos de aventuras que puedes crear:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="adventure-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🌳 Aventura del Bosque</h5>
+                            <p class="text-sm text-gray-600">Explora diferentes ecosistemas, rescata animales y planta árboles</p>
+                        </div>
+                        <div class="adventure-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🌊 Aventura Marina</h5>
+                            <p class="text-sm text-gray-600">Limpia los océanos, salva vida marina y descubre tesoros submarinos</p>
+                        </div>
+                        <div class="adventure-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">🏙️ Aventura Urbana</h5>
+                            <p class="text-sm text-gray-600">Transforma la ciudad, crea jardines verticales y promueve transporte limpio</p>
+                        </div>
+                        <div class="adventure-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-400">
+                            <h5 class="font-medium text-yellow-600 mb-2">🚀 Aventura Espacial</h5>
+                            <p class="text-sm text-gray-600">Explora planetas, encuentra recursos renovables y construye colonias sostenibles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando el Sistema de Mapas</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Configuración del proyecto "EcoAventura":</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-4">
+                        <li>Crea un nuevo proyecto llamado "EcoAventura"</li>
+                        <li>Añade al menos 4 fondos diferentes (bosque, playa, ciudad, espacio)</li>
+                        <li>Crea un sprite "Explorador" como personaje principal</li>
+                        <li>Añade sprites para objetos secretos (semillas, cristales, herramientas)</li>
+                    </ol>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Múltiples escenarios del juego - bosque, océano, ciudad y espacio]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Programando la Navegación entre Mapas</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Sistema de cambio de escenarios:</h4>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mb-4">
+                        <div class="space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h5 class="font-medium mb-2">Para el personaje principal:</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                                    <span class="scratch-block scratch-looks">cambiar fondo a Bosque</span><br>
+                                    <span class="scratch-block scratch-motion">ir a x: -200 y: 0</span><br>
+                                    <span class="scratch-block">fijar Nivel a 1</span>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h5 class="font-medium mb-2">Cambio de nivel:</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar tecla espacio</span><br>
+                                    <span class="scratch-block scratch-control">si</span>
+                                    <span class="scratch-block">Nivel = 1</span><br>
+                                    <div class="ml-8">
+                                        <span class="scratch-block scratch-looks">cambiar fondo a Océano</span><br>
+                                        <span class="scratch-block">fijar Nivel a 2</span><br>
+                                        <span class="scratch-block scratch-motion">ir a x: -200 y: 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Creando Objetos Secretos y Misiones</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Sistema de objetos coleccionables:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium mb-2">Semillas Mágicas (Bosque):</h5>
+                            <div class="bg-gray-50 p-3 rounded text-sm">
+                                <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">Nivel = 1</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block scratch-looks">mostrar</span><br>
+                                    <span class="scratch-block scratch-control">por siempre</span><br>
+                                    <div class="ml-8">
+                                        <span class="scratch-block scratch-control">si</span>
+                                        <span class="scratch-block scratch-sensing">¿tocando Explorador?</span><br>
+                                        <div class="ml-8">
+                                            <span class="scratch-block scratch-looks">decir ¡Semilla encontrada! +10 puntos</span><br>
+                                            <span class="scratch-block">cambiar Puntos por 10</span><br>
+                                            <span class="scratch-block scratch-looks">esconder</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium mb-2">Cristales de Agua (Océano):</h5>
+                            <p class="text-sm text-gray-600">Objetos que aparecen solo en el nivel del océano y otorgan 15 puntos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Añadiendo Narrativa y Diálogos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Creando personajes que cuentan la historia:</h4>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mb-4">
+                        <div class="space-y-2">
+                            <h5 class="font-medium mb-2">Sprite "Guía Sabio":</h5>
+                            <span class="scratch-block scratch-event">al hacer clic en este objeto</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">Nivel = 1</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir Bienvenido al Bosque Encantado por 3 segundos</span><br>
+                                <span class="scratch-block scratch-looks">decir Encuentra 5 semillas para salvar este ecosistema por 4 segundos</span><br>
+                                <span class="scratch-block scratch-looks">decir Presiona ESPACIO para avanzar al siguiente nivel por 3 segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h5 class="font-medium text-blue-800 mb-2">💡 Ideas para diálogos:</h5>
+                        <ul class="text-sm text-blue-700 space-y-1">
+                            <li>• Información sobre cada ecosistema</li>
+                            <li>• Consejos de conservación ambiental</li>
+                            <li>• Pistas sobre objetos secretos</li>
+                            <li>• Celebración de logros del jugador</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Sistema de Progreso y Logros</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Creando un sistema de recompensas:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">Variables necesarias:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Puntos (puntuación total)</li>
+                                <li>• Nivel (escenario actual)</li>
+                                <li>• ObjetosEncontrados</li>
+                                <li>• MisionesCompletadas</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-purple-600 mb-2">Logros desbloqueables:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Explorador Novato (10 puntos)</li>
+                                <li>• Guardián del Bosque (50 puntos)</li>
+                                <li>• Protector Marino (100 puntos)</li>
+                                <li>• Héroe Ecológico (200 puntos)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Diseño de Aventuras</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Crea una historia coherente y emocionante</li>
+                            <li>• Balancea la dificultad progresivamente</li>
+                            <li>• Incluye múltiples formas de interactuar</li>
+                            <li>• Añade elementos sorpresa y secretos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Programación Avanzada</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Usa variables para controlar el estado del juego</li>
+                            <li>• Organiza tu código con mensajes personalizados</li>
+                            <li>• Prueba cada nivel por separado</li>
+                            <li>• Documenta tu código con comentarios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-orange-800 mb-3">🌟 Narrativa Digital</h3>
+                <p class="text-orange-700">
+                    Los mejores juegos de aventura combinan mecánicas divertidas con historias significativas. 
+                    Tu juego puede ser una herramienta poderosa para enseñar sobre conservación ambiental mientras 
+                    entretienes a los jugadores. Piensa en cómo cada elemento del juego puede transmitir un mensaje positivo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Actividad Extra -->
+        <section class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-orange-600 font-bold text-sm">🎮</span>
+                </div>
+                Actividad Extra: Expande tu Aventura
+            </h2>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Desafíos creativos:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-orange-600 mb-3">🗺️ Expansión del Mundo:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Añade más niveles y escenarios</li>
+                            <li>Crea mapas interconectados</li>
+                            <li>Incluye portales entre mundos</li>
+                            <li>Diseña áreas secretas ocultas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-red-600 mb-3">⚡ Mecánicas Avanzadas:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Sistema de inventario para objetos</li>
+                            <li>Puzzles ambientales para resolver</li>
+                            <li>Personajes no jugables (NPCs)</li>
+                            <li>Sistema de día y noche</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="clase3.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Clase Anterior
+            </a>
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">Clase 4 de 12</p>
+                <div class="w-48 bg-gray-200 rounded-full h-2 mt-2">
+                    <div class="bg-orange-600 h-2 rounded-full" style="width: 33.33%"></div>
+                </div>
+            </div>
+            <a href="clase5.html" class="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
+                Siguiente Clase →
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Centro de Interés ECOTECH - Clase 4: ¿Qué Aventuras?</p>
+        </div>
+    </footer>
+</body>
+</html>

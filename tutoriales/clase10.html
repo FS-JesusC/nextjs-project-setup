@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10: Videojuegos que Conectan - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .connection-card {
+            transition: all 0.4s ease;
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        }
+        .connection-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .family-game {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+        }
+        .star-feature {
+            background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+            border-left: 4px solid #0891b2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-cyan-600 hover:text-cyan-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 10 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-cyan-400 to-cyan-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">10</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Videojuegos que Conectan</h1>
+            <p class="text-xl opacity-90">Creando Experiencias que Conectan con la Familia y te Convierten en una Estrella</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: EXPRESIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-cyan-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-cyan-50 border-l-4 border-cyan-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes crearán videojuegos diseñados específicamente para fortalecer vínculos familiares 
+                    y comunitarios. Aprenderán a desarrollar experiencias multijugador cooperativas, implementarán 
+                    sistemas de logros compartidos, y diseñarán mecánicas que promuevan la colaboración intergeneracional 
+                    mientras abordan temas de sostenibilidad y conciencia ambiental.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas Multijugador:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                            <span>Scratch con funciones de clones avanzadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                            <span>Sistema de variables globales compartidas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                            <span>Controles para múltiples jugadores</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Recursos Familiares:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Actividades intergeneracionales planificadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Temas de conversación familiar</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Desafíos cooperativos diseñados</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-cyan-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Diseñando Juegos que Unen Generaciones</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Características de juegos familiares exitosos:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="connection-card p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🤝 Cooperación Intergeneracional</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Diferentes habilidades se complementan</li>
+                                <li>• Los adultos aportan experiencia</li>
+                                <li>• Los jóvenes aportan agilidad digital</li>
+                                <li>• Todos aprenden unos de otros</li>
+                            </ul>
+                        </div>
+                        <div class="connection-card p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🎮 Mecánicas Inclusivas</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Controles simples e intuitivos</li>
+                                <li>• Múltiples niveles de dificultad</li>
+                                <li>• Opciones de accesibilidad</li>
+                                <li>• Ritmo pausado y reflexivo</li>
+                            </ul>
+                        </div>
+                        <div class="connection-card p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">💬 Comunicación Activa</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Requiere discusión y planificación</li>
+                                <li>• Promueve el diálogo familiar</li>
+                                <li>• Genera momentos de reflexión</li>
+                                <li>• Crea recuerdos compartidos</li>
+                            </ul>
+                        </div>
+                        <div class="connection-card p-4 rounded-lg border-l-4 border-orange-400">
+                            <h5 class="font-medium text-orange-600 mb-2">🌱 Valores Compartidos</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Enseña sobre sostenibilidad</li>
+                                <li>• Promueve valores familiares</li>
+                                <li>• Fomenta la responsabilidad social</li>
+                                <li>• Inspira acción colectiva</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando "EcoFamilia" - El Juego que Une</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <div class="family-game p-6 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3">🏠 Concepto: EcoFamilia - Construyendo un Hogar Sostenible Juntos</h4>
+                        <p class="text-gray-700 mb-4">
+                            Un juego cooperativo donde familias trabajan juntas para transformar una casa común en un 
+                            hogar completamente sostenible, tomando decisiones que afectan tanto el medio ambiente 
+                            como la economía familiar, mientras aprenden sobre sostenibilidad de manera divertida.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h5 class="font-medium text-green-600 mb-2">🎯 Objetivos del Juego:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Reducir la huella de carbono familiar</li>
+                                    <li>• Ahorrar dinero con decisiones inteligentes</li>
+                                    <li>• Mejorar la calidad de vida del hogar</li>
+                                    <li>• Educar a toda la familia sobre sostenibilidad</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h5 class="font-medium text-blue-600 mb-2">👥 Roles Familiares:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Planificador/a (adulto): Gestiona presupuesto</li>
+                                    <li>• Investigador/a (joven): Busca soluciones</li>
+                                    <li>• Implementador/a (todos): Ejecuta cambios</li>
+                                    <li>• Monitor/a (todos): Mide el progreso</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Casa familiar con diferentes áreas (cocina, jardín, sala) y medidores de sostenibilidad]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Implementando el Sistema Multijugador</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Configuración para múltiples jugadores:</h4>
+                    <div class="star-feature p-4 rounded-lg mb-4">
+                        <h5 class="font-medium mb-2">Sistema de turnos cooperativos:</h5>
+                        <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                            <li>Crea un nuevo proyecto llamado "EcoFamilia-Conecta"</li>
+                            <li>Diseña una casa con 6 áreas interactivas (cocina, sala, jardín, etc.)</li>
+                            <li>Crea sprites para cada miembro de la familia (4 jugadores máximo)</li>
+                            <li>Implementa un sistema de turnos que rote entre jugadores</li>
+                            <li>Añade indicadores visuales para mostrar de quién es el turno</li>
+                        </ol>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Control de turnos y jugadores:</h5>
+                        <div class="space-y-2 text-sm">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block">fijar JugadorActivo a 1</span><br>
+                            <span class="scratch-block">fijar TotalJugadores a 4</span><br>
+                            <span class="scratch-block">fijar PresupuestoFamiliar a 5000</span><br>
+                            <span class="scratch-block">fijar HuellaCarbonoFamiliar a 100</span><br>
+                            <span class="scratch-block scratch-looks">decir unir Turno del Jugador JugadorActivo por 2 segundos</span><br>
+                            <br>
+                            <span class="scratch-block scratch-event">al presionar tecla espacio</span><br>
+                            <span class="scratch-block">cambiar JugadorActivo por 1</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">JugadorActivo > TotalJugadores</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block">fijar JugadorActivo a 1</span>
+                            </div>
+                            <span class="scratch-block scratch-looks">decir unir Turno del Jugador JugadorActivo por 2 segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Creando Desafíos Cooperativos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Ejemplo: Desafío "Renovación de la Cocina Ecológica"</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🍳 Situación del Desafío:</h5>
+                            <p class="text-sm text-gray-600 mb-2">
+                                La familia debe renovar su cocina para hacerla más eficiente energéticamente. 
+                                Cada jugador tiene un rol específico y deben colaborar para tomar la mejor decisión.
+                            </p>
+                            <div class="bg-gray-50 p-3 rounded text-xs">
+                                <strong>Opciones disponibles:</strong>
+                                <ul class="mt-1 space-y-1">
+                                    <li>• Electrodomésticos eficientes ($3000, -30% energía)</li>
+                                    <li>• Paneles solares para cocina ($4000, -50% energía)</li>
+                                    <li>• Huerto interior hidropónico ($1500, +alimentos frescos)</li>
+                                    <li>• Sistema de compostaje ($800, -residuos orgánicos)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🤔 Mecánica de Decisión Grupal:</h5>
+                            <div class="bg-gray-50 p-3 rounded text-xs">
+                                <span class="scratch-block scratch-event">al hacer clic en OpcionElectrodomesticos</span><br>
+                                <span class="scratch-block">cambiar VotosElectrodomesticos por 1</span><br>
+                                <span class="scratch-block scratch-looks">decir unir Jugador JugadorActivo vota por Electrodomésticos por 2 segundos</span><br>
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">VotosElectrodomesticos = 3</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block scratch-looks">decir ¡Decisión tomada! Comprando electrodomésticos eficientes por 3 segundos</span><br>
+                                    <span class="scratch-block">cambiar PresupuestoFamiliar por -3000</span><br>
+                                    <span class="scratch-block">cambiar EficienciaEnergetica por 30</span><br>
+                                    <span class="scratch-block">enviar mensaje DesafioCompletado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-orange-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Sistema de Logros Familiares</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Logros que celebran el trabajo en equipo:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-purple-600 mb-2">🏆 Logros de Colaboración:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• "Familia Unida" (5 decisiones unánimes)</li>
+                                <li>• "Equipo Perfecto" (cada jugador contribuye)</li>
+                                <li>• "Comunicadores Expertos" (usan chat del juego)</li>
+                                <li>• "Planificadores Maestros" (completan proyecto)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">🌱 Logros Ecológicos:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• "Casa Verde" (50% reducción de huella)</li>
+                                <li>• "Ahorradores Inteligentes" (presupuesto positivo)</li>
+                                <li>• "Innovadores Sostenibles" (usan tecnología verde)</li>
+                                <li>• "Inspiradores Comunitarios" (comparten logros)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de celebración de logros:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al recibir mensaje LogroDesbloqueado</span><br>
+                            <span class="scratch-block scratch-control">repetir 5</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">cambiar efecto color por 25</span><br>
+                                <span class="scratch-block scratch-control">esperar 0.2 segundos</span>
+                            </div>
+                            <span class="scratch-block scratch-sound">tocar sonido CelebraciónFamiliar</span><br>
+                            <span class="scratch-block scratch-looks">decir ¡LOGRO FAMILIAR DESBLOQUEADO! por 4 segundos</span><br>
+                            <span class="scratch-block">añadir NuevoLogro a ListaLogrosFamiliares</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Convirtiéndote en una Estrella del Desarrollo</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Características que hacen brillar a una desarrolladora:</h4>
+                    <div class="star-feature p-6 rounded-lg mb-4">
+                        <h5 class="font-medium text-cyan-800 mb-3">⭐ Cualidades de una Estrella del Desarrollo:</h5>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-green-600 mb-2">🎯 Visión Clara</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Identifica problemas reales</li>
+                                    <li>• Diseña soluciones innovadoras</li>
+                                    <li>• Piensa en el impacto a largo plazo</li>
+                                    <li>• Mantiene el foco en el usuario</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-blue-600 mb-2">🤝 Liderazgo Colaborativo</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Inspira a otros a participar</li>
+                                    <li>• Facilita la comunicación</li>
+                                    <li>• Reconoce las contribuciones</li>
+                                    <li>• Construye comunidades</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-purple-600 mb-2">💡 Innovación Constante</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Experimenta con nuevas ideas</li>
+                                    <li>• Aprende de los errores</li>
+                                    <li>• Mejora continuamente</li>
+                                    <li>• Comparte conocimientos</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-orange-600 mb-2">🌟 Impacto Positivo</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Crea tecnología con propósito</li>
+                                    <li>• Promueve la inclusión</li>
+                                    <li>• Genera cambio social</li>
+                                    <li>• Inspira a la próxima generación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de reconocimiento de estrella:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al completar proyecto familiar</span><br>
+                            <span class="scratch-block">cambiar ProyectosCompletados por 1</span><br>
+                            <span class="scratch-block">cambiar FamiliasImpactadas por 1</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">ProyectosCompletados ≥ 3 y FamiliasImpactadas ≥ 10</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir ¡FELICIDADES! Eres oficialmente una ESTRELLA del desarrollo por 5 segundos</span><br>
+                                <span class="scratch-block">enviar mensaje EstrellaNacida</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Juegos Familiares Exitosos</h3>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6: Ideas Brillantes - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .idea-card {
+            transition: all 0.4s ease;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .idea-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .business-step {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-indigo-600 hover:text-indigo-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 6 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-indigo-400 to-indigo-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">6</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Ideas Brillantes</h1>
+            <p class="text-xl opacity-90">Convirtiendo Pasiones en Negocios que Ayudan al Planeta</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: ASOCIACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-indigo-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-indigo-50 border-l-4 border-indigo-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes aprenderán a identificar problemas ambientales en su comunidad y desarrollarán 
+                    ideas innovadoras para crear soluciones tecnológicas sostenibles. Crearán un simulador de negocio 
+                    ecológico en Scratch que demuestre cómo las pasiones personales pueden transformarse en empresas 
+                    que generen impacto positivo en el planeta.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas Digitales:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                            <span>Scratch con extensiones avanzadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                            <span>Variables y listas para datos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
+                            <span>Sprites de elementos de negocio</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Recursos de Investigación:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Ejemplos de empresas ecológicas exitosas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Problemas ambientales locales identificados</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Cuaderno de ideas y bocetos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-indigo-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Identificando Oportunidades de Negocio Ecológico</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Tipos de negocios ecológicos que puedes crear:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="idea-card p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🌱 Agricultura Urbana</h5>
+                            <p class="text-sm text-gray-600">Cultivos verticales, huertos comunitarios, agricultura hidropónica</p>
+                        </div>
+                        <div class="idea-card p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">♻️ Reciclaje Innovador</h5>
+                            <p class="text-sm text-gray-600">Transformación de residuos en productos útiles, economía circular</p>
+                        </div>
+                        <div class="idea-card p-4 rounded-lg border-l-4 border-yellow-400">
+                            <h5 class="font-medium text-yellow-600 mb-2">⚡ Energía Renovable</h5>
+                            <p class="text-sm text-gray-600">Paneles solares comunitarios, energía eólica, biocombustibles</p>
+                        </div>
+                        <div class="idea-card p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">🚲 Transporte Sostenible</h5>
+                            <p class="text-sm text-gray-600">Bicicletas compartidas, vehículos eléctricos, rutas ecológicas</p>
+                        </div>
+                        <div class="idea-card p-4 rounded-lg border-l-4 border-pink-400">
+                            <h5 class="font-medium text-pink-600 mb-2">🏠 Construcción Verde</h5>
+                            <p class="text-sm text-gray-600">Materiales sostenibles, casas eficientes, arquitectura bioclimática</p>
+                        </div>
+                        <div class="idea-card p-4 rounded-lg border-l-4 border-teal-400">
+                            <h5 class="font-medium text-teal-600 mb-2">💧 Gestión del Agua</h5>
+                            <p class="text-sm text-gray-600">Purificación natural, recolección de lluvia, riego inteligente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando el Simulador "EcoEmprendedor"</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Configuración del proyecto:</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-4">
+                        <li>Crea un nuevo proyecto llamado "EcoEmprendedor"</li>
+                        <li>Diseña un fondo que represente una ciudad con problemas ambientales</li>
+                        <li>Crea sprites para diferentes tipos de negocios ecológicos</li>
+                        <li>Añade un sprite "Emprendedor" como personaje principal</li>
+                        <li>Crea indicadores visuales (dinero, impacto ambiental, felicidad ciudadana)</li>
+                    </ol>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Simulador de ciudad con diferentes negocios ecológicos y medidores de progreso]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Programando el Sistema de Negocios</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Variables del simulador:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">Variables Económicas:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Dinero (capital inicial: 1000)</li>
+                                <li>• Ingresos (ganancias por negocio)</li>
+                                <li>• Gastos (costos de operación)</li>
+                                <li>• Inversión (dinero invertido)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">Variables Ambientales:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• ImpactoPositivo (beneficio ambiental)</li>
+                                <li>• Contaminación (nivel de polución)</li>
+                                <li>• Sostenibilidad (índice verde)</li>
+                                <li>• FelicidadCiudadana (satisfacción)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Inicialización del juego:</h5>
+                        <div class="space-y-1">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block">fijar Dinero a 1000</span><br>
+                            <span class="scratch-block">fijar ImpactoPositivo a 0</span><br>
+                            <span class="scratch-block">fijar Contaminación a 100</span><br>
+                            <span class="scratch-block">fijar FelicidadCiudadana a 50</span><br>
+                            <span class="scratch-block scratch-looks">decir ¡Bienvenido! Tienes $1000 para crear tu negocio ecológico por 3 segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Implementando Diferentes Modelos de Negocio</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Ejemplo: Negocio de Reciclaje</h4>
+                    <div class="business-step p-4 rounded-lg mb-4">
+                        <h5 class="font-medium mb-2">Sprite "Centro de Reciclaje":</h5>
+                        <div class="bg-white p-3 rounded text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en este objeto</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">Dinero ≥ 300</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block">cambiar Dinero por -300</span><br>
+                                <span class="scratch-block scratch-looks">decir Centro de Reciclaje construido! -$300 por 2 segundos</span><br>
+                                <span class="scratch-block scratch-control">repetir para siempre</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block">cambiar Dinero por 50</span><br>
+                                    <span class="scratch-block">cambiar ImpactoPositivo por 10</span><br>
+                                    <span class="scratch-block">cambiar Contaminación por -5</span><br>
+                                    <span class="scratch-block scratch-control">esperar 5 segundos</span>
+                                </div>
+                            </div>
+                            <span class="scratch-block scratch-control">si no</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir Necesitas $300 para construir este negocio por 2 segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Sistema de Desafíos y Eventos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Eventos aleatorios que afectan el negocio:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🌟 Eventos Positivos:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Subvención gubernamental (+$500)</li>
+                                <li>• Premio a la innovación (+$300, +20 impacto)</li>
+                                <li>• Alianza estratégica (+$200, +10 felicidad)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-red-400">
+                            <h5 class="font-medium text-red-600 mb-2">⚠️ Desafíos:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Crisis económica (-$200)</li>
+                                <li>• Competencia desleal (-$100, -5 felicidad)</li>
+                                <li>• Regulaciones nuevas (-$150)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mt-4">
+                        <h5 class="font-medium mb-2">Sistema de eventos aleatorios:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">cada 30 segundos</span><br>
+                            <span class="scratch-block">fijar EventoRandom a número al azar entre 1 y 10</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">EventoRandom = 1</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir ¡Recibiste una subvención! +$500 por 3 segundos</span><br>
+                                <span class="scratch-block">cambiar Dinero por 500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Métricas de Éxito y Objetivos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Sistema de logros y metas:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-indigo-600 mb-2">🏆 Niveles de Éxito:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Emprendedor Novato (ImpactoPositivo > 50)</li>
+                                <li>• Empresario Verde (ImpactoPositivo > 200)</li>
+                                <li>• Líder Sostenible (ImpactoPositivo > 500)</li>
+                                <li>• Héroe Planetario (ImpactoPositivo > 1000)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-purple-600 mb-2">📊 Indicadores Clave:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• ROI Ambiental (Impacto/Inversión)</li>
+                                <li>• Índice de Sostenibilidad</li>
+                                <li>• Satisfacción Comunitaria</li>
+                                <li>• Crecimiento del Negocio</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Emprendimiento Ecológico</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Identifica problemas reales de tu comunidad</li>
+                            <li>• Busca soluciones que beneficien a todos</li>
+                            <li>• Considera el impacto a largo plazo</li>
+                            <li>• Colabora con otros emprendedores</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Programación de Simuladores</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Balancea la dificultad del juego</li>
+                            <li>• Usa variables para datos complejos</li>
+                            <li>• Incluye retroalimentación constante</li>
+                            <li>• Haz que las decisiones tengan consecuencias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-indigo-50 border-l-4 border-indigo-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-indigo-800 mb-3">🌟 Innovación con Propósito</h3>
+                <p class="text-indigo-700">
+                    Las mejores ideas de negocio nacen cuando combinamos nuestras pasiones con las necesidades del mundo. 
+                    Tu simulador no solo enseña sobre emprendimiento, sino que inspira a crear soluciones reales. 
+                    Recuerda que cada gran empresa comenzó como una idea brillante en la mente de alguien como tú.
+                </p>
+            </div>
+        </section>
+
+        <!-- Actividad Extra -->
+        <section class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-indigo-600 font-bold text-sm">🎮</span>
+                </div>
+                Actividad Extra: Pitch de tu Idea de Negocio
+            </h2>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Presenta tu idea como un verdadero emprendedor:</h3>
+                <p class="text-gray-700 mb-4">
+                    Crea una presentación interactiva en Scratch que explique tu idea de negocio ecológico:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-indigo-600 mb-3">📋 Elementos del Pitch:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Problema que resuelves</li>
+                            <li>Tu solución innovadora</li>
+                            <li>Mercado objetivo</li>
+                            <li>Modelo de negocio</li>
+                            <li>Impacto ambiental esperado</li>
+                            <li>Proyección financiera</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-blue-600 mb-3">⚡ Funcionalidades:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Slides interactivos navegables</li>
+                            <li>Gráficos animados de datos</li>
+                            <li>Simulación de tu producto/servicio</li>
+                            <li>Calculadora de impacto ambiental</li>
+                            <li>Testimonios de clientes simulados</li>
+                            <li>Call-to-action para inversores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="clase5.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Clase Anterior
+            </a>
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">Clase 6 de 12</p>
+                <div class="w-48 bg-gray-200 rounded-full h-2 mt-2">
+                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 50%"></div>
+                </div>
+            </div>
+            <a href="clase7.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                Siguiente Clase →
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Centro de Interés ECOTECH - Clase 6: Ideas Brillantes</p>
+        </div>
+    </footer>
+</body>
+</html>

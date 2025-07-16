@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 7: Tu Opinión Cuenta - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .feedback-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+        }
+        .feedback-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .collaboration-step {
+            background: linear-gradient(135deg, #fef7ff 0%, #fae8ff 100%);
+            border-left: 4px solid #a855f7;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-teal-600 hover:text-teal-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 7 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-teal-400 to-teal-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">7</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Tu Opinión Cuenta</h1>
+            <p class="text-xl opacity-90">Creando Mejores Apps y Videojuegos con la Ayuda de Otras Chicas</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: ASOCIACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-teal-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-teal-50 border-l-4 border-teal-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes aprenderán la importancia del feedback colaborativo en el desarrollo de software. 
+                    Crearán un sistema de evaluación y mejora continua para sus proyectos, implementarán funcionalidades 
+                    de retroalimentación en Scratch, y desarrollarán habilidades de trabajo en equipo para crear 
+                    aplicaciones y videojuegos más efectivos y centrados en el usuario.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas Colaborativas:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                            <span>Proyectos de Scratch de clases anteriores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                            <span>Sistema de comentarios de Scratch</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                            <span>Formularios de evaluación</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Recursos de Evaluación:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Rúbricas de evaluación de proyectos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Plantillas de feedback constructivo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Herramientas de testing de usabilidad</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-teal-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Fundamentos del Feedback Colaborativo</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Tipos de retroalimentación efectiva:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="feedback-card p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">✅ Feedback Constructivo</h5>
+                            <p class="text-sm text-gray-600">Señala problemas específicos y ofrece soluciones concretas</p>
+                            <div class="mt-2 text-xs text-green-700 bg-green-50 p-2 rounded">
+                                Ejemplo: "El botón de inicio es difícil de encontrar. Podrías hacerlo más grande y cambiar el color."
+                            </div>
+                        </div>
+                        <div class="feedback-card p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🎯 Feedback Específico</h5>
+                            <p class="text-sm text-gray-600">Se enfoca en aspectos concretos del proyecto</p>
+                            <div class="mt-2 text-xs text-blue-700 bg-blue-50 p-2 rounded">
+                                Ejemplo: "La música de fondo en el nivel 2 es muy alta y distrae del juego."
+                            </div>
+                        </div>
+                        <div class="feedback-card p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">💡 Feedback Creativo</h5>
+                            <p class="text-sm text-gray-600">Sugiere nuevas ideas y mejoras innovadoras</p>
+                            <div class="mt-2 text-xs text-purple-700 bg-purple-50 p-2 rounded">
+                                Ejemplo: "¿Qué tal si añades un sistema de logros para motivar a los jugadores?"
+                            </div>
+                        </div>
+                        <div class="feedback-card p-4 rounded-lg border-l-4 border-orange-400">
+                            <h5 class="font-medium text-orange-600 mb-2">🌟 Feedback Positivo</h5>
+                            <p class="text-sm text-gray-600">Reconoce fortalezas y elementos exitosos</p>
+                            <div class="mt-2 text-xs text-orange-700 bg-orange-50 p-2 rounded">
+                                Ejemplo: "Me encanta cómo los colores del juego transmiten calma y conexión con la naturaleza."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando un Sistema de Evaluación en Scratch</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Proyecto: "EvaluadorApp" - Sistema de Feedback</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-4">
+                        <li>Crea un nuevo proyecto llamado "EvaluadorApp"</li>
+                        <li>Diseña una interfaz con diferentes categorías de evaluación</li>
+                        <li>Crea sprites para estrellas de calificación (1-5 estrellas)</li>
+                        <li>Añade campos de texto para comentarios</li>
+                        <li>Implementa un sistema de guardado de evaluaciones</li>
+                    </ol>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Interfaz de evaluación con estrellas, categorías y campo de comentarios]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Programando el Sistema de Calificaciones</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Categorías de evaluación para apps/juegos ecológicos:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">Categorías Técnicas:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Funcionalidad (¿funciona correctamente?)</li>
+                                <li>• Usabilidad (¿es fácil de usar?)</li>
+                                <li>• Diseño Visual (¿se ve atractivo?)</li>
+                                <li>• Rendimiento (¿es rápido y fluido?)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">Categorías de Contenido:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Mensaje Ecológico (¿enseña sobre el ambiente?)</li>
+                                <li>• Creatividad (¿es original e innovador?)</li>
+                                <li>• Diversión (¿es entretenido?)</li>
+                                <li>• Impacto Educativo (¿se aprende algo?)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de calificación por estrellas:</h5>
+                        <div class="space-y-2 text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en Estrella1</span><br>
+                            <span class="scratch-block">fijar CalificaciónFuncionalidad a 1</span><br>
+                            <span class="scratch-block scratch-looks">cambiar disfraz a estrella-llena</span><br>
+                            <span class="scratch-block scratch-looks">decir Calificación: 1/5 - Necesita mejoras por 2 segundos</span><br>
+                            <br>
+                            <span class="scratch-block scratch-event">al hacer clic en Estrella5</span><br>
+                            <span class="scratch-block">fijar CalificaciónFuncionalidad a 5</span><br>
+                            <span class="scratch-block scratch-looks">cambiar disfraz a estrella-llena</span><br>
+                            <span class="scratch-block scratch-looks">decir Calificación: 5/5 - ¡Excelente! por 2 segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Implementando Comentarios y Sugerencias</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Sistema de comentarios estructurados:</h4>
+                    <div class="collaboration-step p-4 rounded-lg mb-4">
+                        <h5 class="font-medium mb-2">Plantilla de comentarios:</h5>
+                        <div class="bg-white p-3 rounded text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en BotonComentar</span><br>
+                            <span class="scratch-block scratch-sensing">preguntar ¿Qué te gustó más del proyecto? y esperar</span><br>
+                            <span class="scratch-block">fijar LoQueGusto a respuesta</span><br>
+                            <span class="scratch-block scratch-sensing">preguntar ¿Qué se podría mejorar? y esperar</span><br>
+                            <span class="scratch-block">fijar SugerenciaMejora a respuesta</span><br>
+                            <span class="scratch-block scratch-sensing">preguntar ¿Qué nueva función añadirías? y esperar</span><br>
+                            <span class="scratch-block">fijar IdeaNueva a respuesta</span><br>
+                            <span class="scratch-block scratch-looks">decir unir Feedback guardado: unir LoQueGusto unir - Mejora: SugerenciaMejora</span>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h5 class="font-medium text-blue-800 mb-2">💡 Tipos de preguntas efectivas:</h5>
+                        <ul class="text-sm text-blue-700 space-y-1">
+                            <li>• ¿Qué fue lo más fácil/difícil de entender?</li>
+                            <li>• ¿Qué función te resultó más útil?</li>
+                            <li>• ¿Qué cambiarías del diseño visual?</li>
+                            <li>• ¿Cómo mejorarías la experiencia del usuario?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Creando Sesiones de Testing Colaborativo</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Metodología de testing en grupo:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🔄 Fase 1: Intercambio de Proyectos</h5>
+                            <p class="text-sm text-gray-600 mb-2">Cada estudiante prueba el proyecto de otra compañera</p>
+                            <ul class="text-xs text-gray-500 space-y-1">
+                                <li>• Tiempo de prueba: 10 minutos por proyecto</li>
+                                <li>• Tomar notas durante la experiencia</li>
+                                <li>• Identificar momentos de confusión o dificultad</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">📝 Fase 2: Documentación de Feedback</h5>
+                            <p class="text-sm text-gray-600 mb-2">Usar el sistema de evaluación creado en Scratch</p>
+                            <ul class="text-xs text-gray-500 space-y-1">
+                                <li>• Calificar cada categoría con estrellas</li>
+                                <li>• Escribir comentarios específicos</li>
+                                <li>• Sugerir mejoras concretas</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">💬 Fase 3: Sesión de Feedback</h5>
+                            <p class="text-sm text-gray-600 mb-2">Discusión grupal sobre las evaluaciones</p>
+                            <ul class="text-xs text-gray-500 space-y-1">
+                                <li>• Presentar feedback de manera constructiva</li>
+                                <li>• Discutir soluciones en grupo</li>
+                                <li>• Priorizar mejoras por impacto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Implementando Mejoras Basadas en Feedback</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Proceso de iteración y mejora:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-red-600 mb-2">🔧 Mejoras Técnicas:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Corregir bugs reportados</li>
+                                <li>• Mejorar la navegación</li>
+                                <li>• Optimizar el rendimiento</li>
+                                <li>• Añadir instrucciones más claras</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-orange-600 mb-2">🎨 Mejoras de Diseño:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Ajustar colores y contrastes</li>
+                                <li>• Mejorar la disposición de elementos</li>
+                                <li>• Añadir animaciones suaves</li>
+                                <li>• Crear iconos más intuitivos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mt-4">
+                        <h5 class="font-medium mb-2">Sistema de versionado de mejoras:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block">fijar Versión a 2.0</span><br>
+                            <span class="scratch-block scratch-looks">decir unir Versión: Versión - Mejoras implementadas por 3 segundos</span><br>
+                            <span class="scratch-block scratch-looks">decir Gracias por tu feedback! Este proyecto ahora es mejor por 3 segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Dar Feedback Efectivo</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Sé específica y constructiva</li>
+                            <li>• Enfócate en el proyecto, no en la persona</li>
+                            <li>• Ofrece soluciones, no solo problemas</li>
+                            <li>• Reconoce los aspectos positivos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Recibir Feedback</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Escucha con mente abierta</li>
+                            <li>• Haz preguntas para clarificar</li>
+                            <li>• Agradece todas las opiniones</li>
+                            <li>• Prioriza las mejoras más importantes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-teal-50 border-l-4 border-teal-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-teal-800 mb-3">🌟 Colaboración Efectiva</h3>
+                <p class="text-teal-700">
+                    El desarrollo colaborativo no solo mejora nuestros proyectos, sino que también nos enseña habilidades 
+                    valiosas para la vida. Cuando trabajamos juntas, combinamos diferentes perspectivas y experiencias 
+                    para crear soluciones más completas e inclusivas. Tu opinión realmente cuenta y puede hacer la diferencia.
+                </p>
+            </div>
+        </section>
+
+        <!-- Actividad Extra -->
+        <section class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-teal-600 font-bold text-sm">🎮</span>
+                </div>
+                Actividad Extra: Hackathon de Mejoras Colaborativas
+            </h2>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Evento de mejora intensiva en equipo:</h3>
+                <p class="text-gray-700 mb-4">
+                    Organiza un evento donde todos los proyectos se mejoren colaborativamente en tiempo real:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-teal-600 mb-3">🏆 Estructura del Evento:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Equipos de 3-4 personas</li>
+                            <li>Rotación cada 30 minutos</li>
+                            <li>Cada equipo mejora un proyecto diferente</li>
+                            <li>Documentación de todos los cambios</li>
+                            <li>Presentación final de mejoras</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-cyan-600 mb-3">⚡ Categorías de Premios:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Mejor Mejora Técnica</li>
+                            <li>Diseño Más Creativo</li>
+                            <li>Mayor Impacto Ecológico</li>
+                            <li>Mejor Trabajo en Equipo</li>
+                            <li>Innovación Más Original</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="clase6.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Clase

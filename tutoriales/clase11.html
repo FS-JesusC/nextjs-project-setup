@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 11: Evidencia Ecológica - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .evidence-card {
+            transition: all 0.4s ease;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .evidence-card:hover {
+            transform: translateY(-10px) rotate(-1deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .language-feature {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .planet-care {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid #10b981;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-emerald-600 hover:text-emerald-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 11 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">11</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Evidencia Ecológica</h1>
+            <p class="text-xl opacity-90">Usando las Lenguas e Ideas Cuidas al Planeta</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: EXPRESIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-emerald-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-emerald-50 border-l-4 border-emerald-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes crearán aplicaciones multilingües que documenten y presenten evidencia del impacto 
+                    ambiental de sus proyectos tecnológicos. Aprenderán a integrar diferentes idiomas en sus programas, 
+                    desarrollarán sistemas de recopilación de datos ambientales, y crearán herramientas de comunicación 
+                    que permitan compartir sus logros ecológicos con comunidades globales.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas Multilingües:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                            <span>Diccionarios de términos ecológicos en varios idiomas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                            <span>Listas de variables en diferentes idiomas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                            <span>Extensiones de traducción para Scratch</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Recursos de Documentación:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Plantillas de informes de impacto ambiental</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Herramientas de visualización de datos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Ejemplos de proyectos ecológicos globales</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-emerald-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: El Poder de las Lenguas en la Tecnología Ecológica</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">¿Por qué es importante la diversidad lingüística en proyectos ambientales?</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="evidence-card p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🌍 Alcance Global</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Los problemas ambientales son universales</li>
+                                <li>• Las soluciones deben ser accesibles a todos</li>
+                                <li>• Cada cultura aporta perspectivas únicas</li>
+                                <li>• La colaboración internacional es esencial</li>
+                            </ul>
+                        </div>
+                        <div class="evidence-card p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🤝 Inclusión y Accesibilidad</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Elimina barreras del idioma</li>
+                                <li>• Permite participación equitativa</li>
+                                <li>• Respeta la diversidad cultural</li>
+                                <li>• Amplifica voces marginadas</li>
+                            </ul>
+                        </div>
+                        <div class="evidence-card p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">📚 Conocimiento Tradicional</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Sabiduría ancestral sobre la naturaleza</li>
+                                <li>• Prácticas sostenibles milenarias</li>
+                                <li>• Nombres locales de especies</li>
+                                <li>• Técnicas de conservación tradicionales</li>
+                            </ul>
+                        </div>
+                        <div class="evidence-card p-4 rounded-lg border-l-4 border-orange-400">
+                            <h5 class="font-medium text-orange-600 mb-2">🚀 Innovación Colaborativa</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Intercambio de ideas entre culturas</li>
+                                <li>• Soluciones adaptadas localmente</li>
+                                <li>• Redes de conocimiento global</li>
+                                <li>• Aprendizaje mutuo continuo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando "EcoEvidence" - Documentador Multilingüe</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <div class="planet-care p-6 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3">🌱 Concepto: EcoEvidence - Tu Huella Verde Documentada</h4>
+                        <p class="text-gray-700 mb-4">
+                            Una aplicación que permite a los usuarios documentar, medir y compartir el impacto ambiental 
+                            positivo de sus acciones y proyectos tecnológicos, disponible en múltiples idiomas para 
+                            facilitar la colaboración global en la conservación del planeta.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h5 class="font-medium text-green-600 mb-2">📊 Funciones Principales:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Calculadora de impacto ambiental</li>
+                                    <li>• Diario de acciones ecológicas</li>
+                                    <li>• Generador de informes visuales</li>
+                                    <li>• Comparador de progreso temporal</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h5 class="font-medium text-blue-600 mb-2">🗣️ Idiomas Soportados:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Español (idioma principal)</li>
+                                    <li>• Inglés (alcance internacional)</li>
+                                    <li>• Portugués (región latinoamericana)</li>
+                                    <li>• Lenguas indígenas locales</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Interfaz de EcoEvidence mostrando gráficos de impacto ambiental con opciones de idioma]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Implementando el Sistema Multilingüe</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Configuración de idiomas en Scratch:</h4>
+                    <div class="language-feature p-4 rounded-lg mb-4">
+                        <h5 class="font-medium mb-2">Sistema de traducción dinámico:</h5>
+                        <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                            <li>Crea un nuevo proyecto llamado "EcoEvidence-Multilingue"</li>
+                            <li>Crea listas para cada idioma (TextosEspañol, TextosInglés, TextosPortugués)</li>
+                            <li>Diseña un selector de idioma en la interfaz principal</li>
+                            <li>Implementa un sistema de variables para textos dinámicos</li>
+                            <li>Crea sprites con banderas para representar cada idioma</li>
+                        </ol>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de cambio de idioma:</h5>
+                        <div class="space-y-2 text-sm">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block">fijar IdiomaActual a Español</span><br>
+                            <span class="scratch-block">añadir Bienvenido a EcoEvidence a TextosEspañol</span><br>
+                            <span class="scratch-block">añadir Welcome to EcoEvidence a TextosInglés</span><br>
+                            <span class="scratch-block">añadir Bem-vindo ao EcoEvidence a TextosPortugués</span><br>
+                            <br>
+                            <span class="scratch-block scratch-event">al hacer clic en BanderaInglés</span><br>
+                            <span class="scratch-block">fijar IdiomaActual a Inglés</span><br>
+                            <span class="scratch-block">fijar TextoActual a elemento 1 de TextosInglés</span><br>
+                            <span class="scratch-block scratch-looks">decir TextoActual por 3 segundos</span><br>
+                            <span class="scratch-block">enviar mensaje CambiarIdioma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Creando el Sistema de Documentación de Impacto</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Métricas ambientales que puedes medir:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🌱 Reducción de Carbono</h5>
+                            <p class="text-sm text-gray-600 mb-2">Calcula el CO2 ahorrado por tus acciones ecológicas</p>
+                            <div class="bg-gray-50 p-3 rounded text-xs">
+                                <span class="scratch-block scratch-event">al hacer clic en CalcularCarbono</span><br>
+                                <span class="scratch-block scratch-sensing">preguntar ¿Cuántos km caminaste en lugar de usar auto? y esperar</span><br>
+                                <span class="scratch-block">fijar KmCaminados a respuesta</span><br>
+                                <span class="scratch-block">fijar CO2Ahorrado a KmCaminados * 0.2</span><br>
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">IdiomaActual = Español</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block scratch-looks">decir unir Ahorraste CO2Ahorrado kg de CO2! por 3 segundos</span>
+                                </div>
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">IdiomaActual = Inglés</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block scratch-looks">decir unir You saved CO2Ahorrado kg of CO2! por 3 segundos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">💧 Conservación de Agua</h5>
+                            <p class="text-sm text-gray-600 mb-2">Registra el agua ahorrada con prácticas sostenibles</p>
+                            <div class="bg-gray-50 p-3 rounded text-xs">
+                                Variables: AguaAhorrada, DuchasCortas, LavadoEficiente, RiegoInteligente
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">♻️ Reciclaje y Reutilización</h5>
+                            <p class="text-sm text-gray-600 mb-2">Documenta materiales reciclados y objetos reutilizados</p>
+                            <div class="bg-gray-50 p-3 rounded text-xs">
+                                Variables: PlásticoReciclado, PapelReciclado, ObjetosReutilizados
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-orange-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Generador de Informes Visuales</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Creando reportes automáticos de impacto:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">📈 Gráficos de Progreso:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Línea de tiempo de acciones ecológicas</li>
+                                <li>• Comparación mensual de impacto</li>
+                                <li>• Metas vs. logros alcanzados</li>
+                                <li>• Proyección de impacto futuro</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">🏆 Logros Destacados:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Mayor reducción de CO2 en un mes</li>
+                                <li>• Días consecutivos de acciones verdes</li>
+                                <li>• Proyectos tecnológicos completados</li>
+                                <li>• Personas inspiradas a participar</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Generador automático de reportes:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en GenerarReporte</span><br>
+                            <span class="scratch-block">fijar FechaReporte a fecha actual</span><br>
+                            <span class="scratch-block">fijar TotalCO2 a suma de ListaCO2Ahorrado</span><br>
+                            <span class="scratch-block">fijar TotalAgua a suma de ListaAguaAhorrada</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">IdiomaActual = Español</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir unir REPORTE ECOLÓGICO - Fecha: FechaReporte por 2 segundos</span><br>
+                                <span class="scratch-block scratch-looks">decir unir CO2 ahorrado: TotalCO2 kg por 3 segundos</span><br>
+                                <span class="scratch-block scratch-looks">decir unir Agua conservada: TotalAgua litros por 3 segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Compartiendo tu Evidencia con el Mundo</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Plataforma de intercambio global de evidencias ecológicas:</h4>
+                    <div class="planet-care p-6 rounded-lg mb-4">
+                        <h5 class="font-medium text-emerald-800 mb-3">🌍 Red Global EcoEvidence:</h5>
+                        <p class="text-gray-700 mb-4">
+                            Conecta tu aplicación con una red mundial de jóvenes desarrolladoras que documentan 
+                            su impacto ambiental, creando una base de datos global de evidencias ecológicas.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-green-600 mb-2">📤 Funciones de Compartir:</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Exportar reportes en múltiples idiomas</li>
+                                    <li>• Crear presentaciones automáticas</li>
+                                    <li>• Generar códigos QR para compartir</li>
+                                    <li>• Integrar con redes sociales</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <h6 class="font-medium text-blue-600 mb-2">🤝 Colaboración Global:</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Comparar impacto con otros países</li>
+                                    <li>• Aprender de mejores prácticas</li>
+                                    <li>• Participar en desafíos globales</li>
+                                    <li>• Formar alianzas internacionales</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <h5 class="font-medium mb-2">Sistema de compartir evidencias:</h5>
+                        <div class="text-sm">
+                            <span class="scratch-block scratch-event">al hacer clic en CompartirEvidencia</span><br>
+                            <span class="scratch-block">fijar CodigoCompartir a unir EcoEvidence- número al azar entre 1000 y 9999</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">IdiomaActual = Español</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir unir Tu código para compartir: CodigoCompartir por 5 segundos</span><br>
+                                <span class="scratch-block scratch-looks">decir ¡Comparte tu impacto ecológico con el mundo! por 3 segundos</span>
+                            </div>
+                            <span class="scratch-block">enviar mensaje EvidenciaCompartida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Desarrollo Multilingüe</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Planifica la estructura de textos desde el inicio</li>
+                            <li>• Usa variables para todos los textos dinámicos</li>
+                            <li>• Considera diferencias culturales en el diseño</li>
+                            <li>• Prueba con hablantes nativos de cada idioma</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🌍 Documentación de Impacto</h3>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5: Diseñadores en Scratch - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .design-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+        .design-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-pink-600 hover:text-pink-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 5 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-pink-400 to-pink-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">5</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Diseñadores en Scratch</h1>
+            <p class="text-xl opacity-90">Videojuegos con Propósito Ecológico y Radio Interactivo</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: ASOCIACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-pink-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-pink-50 border-l-4 border-pink-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes desarrollarán habilidades de diseño visual y sonoro para crear videojuegos con propósito ecológico. 
+                    Aprenderán principios de diseño de interfaz, creación de sprites personalizados, diseño de sonido ambiental 
+                    y cómo integrar elementos multimedia para crear experiencias inmersivas que promuevan la conciencia ambiental.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas de Diseño:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-pink-500 rounded-full mr-3"></div>
+                            <span>Editor de sprites integrado en Scratch</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-pink-500 rounded-full mr-3"></div>
+                            <span>Biblioteca de sonidos de Scratch</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-pink-500 rounded-full mr-3"></div>
+                            <span>Herramientas de grabación de audio</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Recursos Creativos:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Paleta de colores ecológicos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Referencias visuales de la naturaleza</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Ideas para mensajes ambientales</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-pink-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Principios de Diseño Visual Ecológico</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Elementos clave del diseño ecológico:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="design-card p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🎨 Paleta de Colores</h5>
+                            <p class="text-sm text-gray-600 mb-3">Usa tonos naturales que evoquen la naturaleza</p>
+                            <div class="flex space-x-2">
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-400 rounded-full"></div>
+                                <div class="w-6 h-6 bg-yellow-400 rounded-full"></div>
+                                <div class="w-6 h-6 bg-orange-400 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="design-card p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🖼️ Formas Orgánicas</h5>
+                            <p class="text-sm text-gray-600">Prefiere formas curvas y naturales sobre líneas rígidas</p>
+                        </div>
+                        <div class="design-card p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">✨ Animaciones Suaves</h5>
+                            <p class="text-sm text-gray-600">Movimientos que imiten la naturaleza (viento, agua, crecimiento)</p>
+                        </div>
+                        <div class="design-card p-4 rounded-lg border-l-4 border-yellow-400">
+                            <h5 class="font-medium text-yellow-600 mb-2">🌱 Simbolismo Visual</h5>
+                            <p class="text-sm text-gray-600">Usa íconos que representen sostenibilidad y vida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando Sprites Personalizados</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Proyecto: "EcoRadio Interactiva"</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-4">
+                        <li>Crea un nuevo proyecto llamado "EcoRadio"</li>
+                        <li>Diseña un sprite de "Radio Ecológica" usando el editor de sprites</li>
+                        <li>Crea sprites de "Ondas de Sonido" animadas</li>
+                        <li>Diseña botones de control (play, pausa, siguiente)</li>
+                        <li>Crea sprites de elementos naturales (hojas, flores, animales)</li>
+                    </ol>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Interfaz de radio ecológica con elementos naturales animados]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Programando la Radio Interactiva</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Sistema de reproducción de contenido:</h4>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mb-4">
+                        <div class="space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h5 class="font-medium mb-2">Sprite "Radio Principal":</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                                    <span class="scratch-block scratch-looks">decir ¡Bienvenidos a EcoRadio! por 3 segundos</span><br>
+                                    <span class="scratch-block">fijar Canal a 1</span><br>
+                                    <span class="scratch-block scratch-control">por siempre</span><br>
+                                    <div class="ml-8">
+                                        <span class="scratch-block scratch-looks">cambiar efecto color por 5</span><br>
+                                        <span class="scratch-block scratch-control">esperar 0.1 segundos</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h5 class="font-medium mb-2">Botón "Play":</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al hacer clic en este objeto</span><br>
+                                    <span class="scratch-block scratch-control">si</span>
+                                    <span class="scratch-block">Canal = 1</span><br>
+                                    <div class="ml-8">
+                                        <span class="scratch-block scratch-sound">tocar sonido Naturaleza hasta terminar</span><br>
+                                        <span class="scratch-block scratch-looks">decir Sonidos del bosque - Relájate y conecta con la naturaleza por 5 segundos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Creando Múltiples Canales Temáticos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Canales de la EcoRadio:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🌳 Canal 1: Sonidos de la Naturaleza</h5>
+                            <p class="text-sm text-gray-600 mb-2">Sonidos relajantes del bosque, océano y montañas</p>
+                            <div class="bg-gray-50 p-2 rounded text-xs">
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">Canal = 1</span><br>
+                                <span class="scratch-block scratch-sound">tocar sonido Bosque</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">📚 Canal 2: Datos Ecológicos</h5>
+                            <p class="text-sm text-gray-600 mb-2">Información educativa sobre el medio ambiente</p>
+                            <div class="bg-gray-50 p-2 rounded text-xs">
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">Canal = 2</span><br>
+                                <span class="scratch-block scratch-looks">decir ¿Sabías que un árbol produce oxígeno para 2 personas al día?</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-purple-400">
+                            <h5 class="font-medium text-purple-600 mb-2">🎵 Canal 3: Música Ambiental</h5>
+                            <p class="text-sm text-gray-600 mb-2">Melodías inspiradas en la naturaleza</p>
+                            <div class="bg-gray-50 p-2 rounded text-xs">
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block">Canal = 3</span><br>
+                                <span class="scratch-block scratch-sound">tocar sonido MúsicaAmbiental</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Añadiendo Efectos Visuales Dinámicos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Animaciones que responden al audio:</h4>
+                    <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300 mb-4">
+                        <div class="space-y-2">
+                            <h5 class="font-medium mb-2">Sprite "Ondas de Sonido":</h5>
+                            <span class="scratch-block scratch-event">al recibir mensaje reproducir</span><br>
+                            <span class="scratch-block scratch-control">repetir 10</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">cambiar tamaño por 10</span><br>
+                                <span class="scratch-block scratch-looks">cambiar efecto fantasma por 10</span><br>
+                                <span class="scratch-block scratch-control">esperar 0.2 segundos</span>
+                            </div>
+                            <span class="scratch-block scratch-looks">fijar tamaño a 50%</span><br>
+                            <span class="scratch-block scratch-looks">fijar efecto fantasma a 0</span>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h5 class="font-medium text-blue-800 mb-2">💡 Ideas para efectos visuales:</h5>
+                        <ul class="text-sm text-blue-700 space-y-1">
+                            <li>• Partículas que flotan como polen</li>
+                            <li>• Hojas que caen suavemente</li>
+                            <li>• Cambios de color según el canal</li>
+                            <li>• Animales que aparecen y desaparecen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Integrando Mensajes Ecológicos</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Sistema de consejos ambientales:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">Lista de consejos:</h5>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Apaga las luces al salir</li>
+                                <li>• Usa transporte público</li>
+                                <li>• Recicla correctamente</li>
+                                <li>• Ahorra agua en casa</li>
+                                <li>• Planta un árbol</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-purple-600 mb-2">Implementación:</h5>
+                            <div class="bg-gray-50 p-2 rounded text-xs">
+                                <span class="scratch-block scratch-event">cada 30 segundos</span><br>
+                                <span class="scratch-block">fijar ConsejoRandom a número al azar entre 1 y 5</span><br>
+                                <span class="scratch-block scratch-looks">decir elemento ConsejoRandom de ListaConsejos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Diseño Visual</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Mantén la coherencia en colores y estilos</li>
+                            <li>• Usa contrastes adecuados para legibilidad</li>
+                            <li>• Crea jerarquía visual clara</li>
+                            <li>• Prueba tu diseño con otros usuarios</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Diseño de Sonido</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Equilibra volúmenes entre diferentes sonidos</li>
+                            <li>• Usa sonidos que complementen el tema</li>
+                            <li>• Evita sonidos repetitivos molestos</li>
+                            <li>• Incluye opciones de control de audio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-pink-50 border-l-4 border-pink-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-pink-800 mb-3">🌟 Diseño con Propósito</h3>
+                <p class="text-pink-700">
+                    El mejor diseño no solo es visualmente atractivo, sino que también comunica un mensaje claro y poderoso. 
+                    Cuando diseñas con propósito ecológico, cada elemento visual y sonoro debe reforzar la conexión del usuario 
+                    con la naturaleza y motivar acciones positivas para el medio ambiente.
+                </p>
+            </div>
+        </section>
+
+        <!-- Actividad Extra -->
+        <section class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-pink-600 font-bold text-sm">🎮</span>
+                </div>
+                Actividad Extra: Galería de Diseño Ecológico
+            </h2>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Proyecto colaborativo:</h3>
+                <p class="text-gray-700 mb-4">
+                    Crea una galería interactiva donde los usuarios puedan explorar diferentes diseños ecológicos:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-pink-600 mb-3">🎨 Elementos a incluir:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Galería de sprites ecológicos creados</li>
+                            <li>Paletas de colores temáticas</li>
+                            <li>Animaciones de elementos naturales</li>
+                            <li>Efectos de sonido ambientales</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-purple-600 mb-3">⚡ Funcionalidades:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Navegación entre diferentes categorías</li>
+                            <li>Vista previa de animaciones</li>
+                            <li>Reproductor de sonidos integrado</li>
+                            <li>Sistema de favoritos del usuario</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="clase4.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Clase Anterior
+            </a>
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">Clase 5 de 12</p>
+                <div class="w-48 bg-gray-200 rounded-full h-2 mt-2">
+                    <div class="bg-pink-600 h-2 rounded-full" style="width: 41.66%"></div>
+                </div>
+            </div>
+            <a href="clase6.html" class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                Siguiente Clase →
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Centro de Interés ECOTECH - Clase 5: Diseñadores en Scratch</p>
+        </div>
+    </footer>
+</body>
+</html>

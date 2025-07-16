@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3: Programación en Scratch - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scratch-block {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scratch-event { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+        .scratch-motion { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); }
+        .scratch-looks { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+        .scratch-sound { background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%); }
+        .scratch-control { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+        .scratch-sensing { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); }
+        .code-example {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-purple-600 hover:text-purple-800 font-medium">← Volver al Inicio</a>
+                <div class="text-sm text-gray-500">Clase 3 de 12</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-purple-400 to-purple-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl font-bold">3</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Programación en Scratch</h1>
+            <p class="text-xl opacity-90">Desarrollo del Software con Bloques Básicos</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: OBSERVACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 font-bold text-sm">🎯</span>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Los estudiantes aprenderán los conceptos fundamentales de programación utilizando los bloques básicos de Scratch. 
+                    Crearán su primer juego interactivo aplicando estructuras de control, movimiento y detección de eventos, 
+                    desarrollando habilidades de pensamiento lógico y resolución de problemas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-blue-600 font-bold text-sm">📋</span>
+                </div>
+                Materiales Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Digitales:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                            <span>Scratch 3.0 en línea o descargado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                            <span>Proyecto de la clase anterior guardado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                            <span>Galería de sprites y fondos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Conceptuales:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Conocimiento básico de Scratch</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Comprensión de secuencias</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Creatividad para diseñar juegos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pasos del Proyecto -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-green-600 font-bold text-sm">🚀</span>
+                </div>
+                Pasos para Desarrollar el Proyecto
+            </h2>
+
+            <!-- Paso 1 -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 1: Conceptos Fundamentales de Programación</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Los 3 pilares de la programación:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h5 class="font-medium text-blue-600 mb-2">🔄 Secuencia</h5>
+                            <p class="text-sm text-gray-600">Los comandos se ejecutan uno después del otro, en orden</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h5 class="font-medium text-green-600 mb-2">🔀 Selección</h5>
+                            <p class="text-sm text-gray-600">El programa toma decisiones usando condiciones (si/entonces)</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-orange-400">
+                            <h5 class="font-medium text-orange-600 mb-2">🔁 Repetición</h5>
+                            <p class="text-sm text-gray-600">Los comandos se repiten múltiples veces (bucles)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 2: Creando un Juego de Laberinto Ecológico</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Configuración del proyecto:</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                        <li>Crea un nuevo proyecto llamado "Laberinto Ecológico"</li>
+                        <li>Elimina el sprite del gato</li>
+                        <li>Añade un sprite de "Reciclador" (personaje principal)</li>
+                        <li>Crea un fondo de laberinto simple o usa uno de la galería</li>
+                        <li>Añade sprites de "basura" para recolectar</li>
+                    </ol>
+                    <div class="code-example">
+                        <p class="text-center text-gray-600 italic">
+                            [Imagen placeholder: Escenario del laberinto con personaje reciclador y elementos de basura]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 3: Programando el Movimiento del Personaje</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Código para controlar el movimiento:</h4>
+                    <div class="code-example">
+                        <div class="space-y-3">
+                            <div class="bg-white p-3 rounded-lg">
+                                <h5 class="font-medium mb-2">Movimiento hacia arriba:</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar tecla flecha arriba</span><br>
+                                    <span class="scratch-block scratch-motion">cambiar y por 10</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h5 class="font-medium mb-2">Movimiento hacia abajo:</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar tecla flecha abajo</span><br>
+                                    <span class="scratch-block scratch-motion">cambiar y por -10</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h5 class="font-medium mb-2">Movimiento hacia la derecha:</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar tecla flecha derecha</span><br>
+                                    <span class="scratch-block scratch-motion">cambiar x por 10</span>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg">
+                                <h5 class="font-medium mb-2">Movimiento hacia la izquierda:</h5>
+                                <div class="space-y-1">
+                                    <span class="scratch-block scratch-event">al presionar tecla flecha izquierda</span><br>
+                                    <span class="scratch-block scratch-motion">cambiar x por -10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 4: Añadiendo Detección de Colisiones</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Evitando que el personaje atraviese paredes:</h4>
+                    <div class="code-example">
+                        <div class="space-y-2">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block scratch-control">por siempre</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block scratch-sensing">¿tocando color negro?</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block scratch-motion">cambiar x por -5</span><br>
+                                    <span class="scratch-block scratch-motion">cambiar y por -5</span><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                        <h5 class="font-medium text-blue-800 mb-2">💡 Explicación:</h5>
+                        <p class="text-sm text-blue-700">
+                            Este código verifica constantemente si el personaje toca el color negro (las paredes). 
+                            Si es así, lo mueve hacia atrás para que no pueda atravesar las paredes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="mb-8 border-l-4 border-red-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 5: Sistema de Recolección de Basura</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Programando los objetos recolectables:</h4>
+                    <div class="code-example">
+                        <div class="space-y-2">
+                            <h5 class="font-medium mb-2">Para cada sprite de basura:</h5>
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block scratch-control">por siempre</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-control">si</span>
+                                <span class="scratch-block scratch-sensing">¿tocando Reciclador?</span><br>
+                                <div class="ml-8">
+                                    <span class="scratch-block scratch-looks">decir ¡Basura reciclada! por 1 segundos</span><br>
+                                    <span class="scratch-block scratch-sound">tocar sonido pop</span><br>
+                                    <span class="scratch-block scratch-looks">esconder</span><br>
+                                    <span class="scratch-block scratch-control">detener otros scripts en este objeto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="mb-8 border-l-4 border-indigo-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Paso 6: Añadiendo un Sistema de Puntuación</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Creando y usando variables:</h4>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-4">
+                        <li>Ve a la sección "Variables" y crea una variable llamada "Puntos"</li>
+                        <li>Marca la casilla para que se muestre en pantalla</li>
+                        <li>Añade el siguiente código al personaje principal:</li>
+                    </ol>
+                    <div class="code-example">
+                        <div class="space-y-2">
+                            <span class="scratch-block scratch-event">al presionar bandera verde</span><br>
+                            <span class="scratch-block">fijar Puntos a 0</span><br>
+                            <br>
+                            <span class="scratch-block scratch-event">al recibir mensaje recolectar</span><br>
+                            <span class="scratch-block">cambiar Puntos por 10</span><br>
+                            <span class="scratch-block scratch-control">si</span>
+                            <span class="scratch-block">Puntos = 100</span><br>
+                            <div class="ml-8">
+                                <span class="scratch-block scratch-looks">decir ¡Felicidades! ¡Laberinto limpio! por 3 segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-yellow-600 font-bold text-sm">💡</span>
+                </div>
+                Consejos y Recomendaciones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Buenas Prácticas de Programación</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Prueba tu código frecuentemente</li>
+                            <li>• Usa nombres descriptivos para variables</li>
+                            <li>• Organiza tus bloques de forma clara</li>
+                            <li>• Comenta tu código con notas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Resolución de Problemas</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Divide problemas grandes en partes pequeñas</li>
+                            <li>• Usa el modo paso a paso para depurar</li>
+                            <li>• Experimenta con diferentes valores</li>
+                            <li>• Pide ayuda cuando te atasques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-purple-800 mb-3">🌟 Pensamiento Computacional</h3>
+                <p class="text-purple-700">
+                    La programación no es solo escribir código, es una forma de pensar y resolver problemas. 
+                    Cada vez que descompones un problema complejo en pasos simples, estás aplicando pensamiento computacional. 
+                    Esta habilidad te será útil en muchas áreas de la vida, no solo en programación.
+                </p>
+            </div>
+        </section>
+
+        <!-- Actividad Extra -->
+        <section class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-purple-600 font-bold text-sm">🎮</span>
+                </div>
+                Actividad Extra: Mejora tu Juego
+            </h2>
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="font-semibold mb-4">Desafíos adicionales:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium text-purple-600 mb-3">🎨 Mejoras Visuales:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Añade animaciones al personaje</li>
+                            <li>Crea efectos visuales al recolectar</li>
+                            <li>Diseña múltiples niveles</li>
+                            <li>Añade un cronómetro</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-indigo-600 mb-3">⚡ Mejoras de Jugabilidad:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Añade enemigos que se muevan</li>
+                            <li>Crea power-ups especiales</li>
+                            <li>Implementa vidas del jugador</li>
+                            <li>Añade música de fondo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="clase2.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Clase Anterior
+            </a>
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">Clase 3 de 12</p>
+                <div class="w-48 bg-gray-200 rounded-full h-2 mt-2">
+                    <div class="bg-purple-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+            </div>
+            <a href="clase4.html" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                Siguiente Clase →
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Centro de Interés ECOTECH - Clase 3: Programación en Scratch</p>
+        </div>
+    </footer>
+</body>
+</html>

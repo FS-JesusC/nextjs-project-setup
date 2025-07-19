@@ -6,8 +6,22 @@
     <title>Tutoriales de Scratch - Centro de Interés ECOTECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .logo-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -15,12 +29,26 @@
     <header class="bg-white shadow-sm border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-6">
-                <div>
-                    <h1 class="text-3xl font-bold text-gray-900">Centro de Interés ECOTECH</h1>
-                    <p class="text-gray-600 mt-1">Tutoriales de Programación en Scratch</p>
+                <div class="flex items-center space-x-4">
+                    <!-- Logo ECOTECH -->
+                    <div class="logo-animation">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                            <div class="text-white font-bold text-xl">ECO</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold gradient-text">Centro de Interés ECOTECH</h1>
+                        <p class="text-gray-600 mt-1 flex items-center">
+                            <i class="fas fa-code mr-2 text-blue-500"></i>
+                            Tutoriales de Programación en Scratch
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-blue-100 px-4 py-2 rounded-lg">
-                    <span class="text-blue-800 font-medium">12 Clases Disponibles</span>
+                <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg shadow-lg">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="font-medium">13 Clases Disponibles</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -28,10 +56,74 @@
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Recursos de Scratch -->
+        <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8 mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                    <i class="fas fa-graduation-cap mr-3 text-orange-500"></i>
+                    Recursos Oficiales de Scratch
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Antes de comenzar con nuestros tutoriales, te recomendamos familiarizarte con estos recursos oficiales de Scratch
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://scratch.mit.edu/" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-home text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Sitio Oficial</h3>
+                        <p class="text-sm text-gray-600">Plataforma principal de Scratch</p>
+                    </div>
+                </a>
+                
+                <a href="https://scratch.mit.edu/ideas" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-lightbulb text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Ideas</h3>
+                        <p class="text-sm text-gray-600">Proyectos e inspiración</p>
+                    </div>
+                </a>
+                
+                <a href="https://scratch.mit.edu/help/" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-question-circle text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Ayuda</h3>
+                        <p class="text-sm text-gray-600">Guías y tutoriales oficiales</p>
+                    </div>
+                </a>
+                
+                <a href="https://scratch.mit.edu/explore/projects/all" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-search text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Explorar</h3>
+                        <p class="text-sm text-gray-600">Proyectos de la comunidad</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
         <!-- Introduction -->
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Cronograma Detallado de Ejecución</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="mb-8">
+                <div class="w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl mx-auto mb-6 logo-animation flex items-center justify-center shadow-xl">
+                    <div class="text-white text-4xl font-bold">S</div>
+                </div>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                <i class="fas fa-calendar-alt mr-4 text-blue-500"></i>
+                Cronograma Detallado de Ejecución
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto flex items-center justify-center">
+                <i class="fas fa-rocket mr-3 text-purple-500"></i>
                 Descubre el mundo de la programación con Scratch a través de nuestros tutoriales interactivos. 
                 Cada clase está diseñada para desarrollar habilidades de pensamiento computacional y creatividad digital.
             </p>
@@ -41,20 +133,28 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Clase 1 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-blue-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">1</span>
+                            <i class="fas fa-play text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Introducción</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">¿Qué es Scratch?</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle mr-2 text-blue-500"></i>
+                        ¿Qué es Scratch?
+                    </h4>
                     <p class="text-gray-600 mb-4">Planificación inicial del Software y exploración de Scratch como herramienta de programación visual.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-blue-600 font-medium">OBSERVACIÓN</span>
-                        <a href="tutoriales/clase1.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <i class="fas fa-eye mr-1"></i>
+                            OBSERVACIÓN
+                        </span>
+                        <a href="tutoriales/clase1.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -63,20 +163,28 @@
 
             <!-- Clase 2 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-green-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">2</span>
+                            <i class="fas fa-mobile-alt text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Aplicaciones</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Apps Inteligentes</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-green-500"></i>
+                        Apps Inteligentes
+                    </h4>
                     <p class="text-gray-600 mb-4">Diseño de arquitectura de aplicaciones y descubrimiento de las Apps que Salvan el Mundo.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-green-600 font-medium">OBSERVACIÓN</span>
-                        <a href="tutoriales/clase2.html" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        <span class="text-sm text-green-600 font-medium flex items-center">
+                            <i class="fas fa-eye mr-1"></i>
+                            OBSERVACIÓN
+                        </span>
+                        <a href="tutoriales/clase2.html" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -85,20 +193,28 @@
 
             <!-- Clase 3 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-purple-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">3</span>
+                            <i class="fas fa-code text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Programación</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Programación en Scratch</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-puzzle-piece mr-2 text-purple-500"></i>
+                        Programación en Scratch
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software con bloques básicos y introducción al diseño de juegos.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-purple-600 font-medium">OBSERVACIÓN</span>
-                        <a href="tutoriales/clase3.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                        <span class="text-sm text-purple-600 font-medium flex items-center">
+                            <i class="fas fa-eye mr-1"></i>
+                            OBSERVACIÓN
+                        </span>
+                        <a href="tutoriales/clase3.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -107,20 +223,28 @@
 
             <!-- Clase 4 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-orange-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">4</span>
+                            <i class="fas fa-map text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Aventuras</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">¿Qué Aventuras?</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-compass mr-2 text-orange-500"></i>
+                        ¿Qué Aventuras?
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software creando juegos de aventuras con mapas digitales y secretos escondidos.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-orange-600 font-medium">OBSERVACIÓN</span>
-                        <a href="tutoriales/clase4.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                        <span class="text-sm text-orange-600 font-medium flex items-center">
+                            <i class="fas fa-eye mr-1"></i>
+                            OBSERVACIÓN
+                        </span>
+                        <a href="tutoriales/clase4.html" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -129,20 +253,28 @@
 
             <!-- Clase 5 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-pink-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">5</span>
+                            <i class="fas fa-palette text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Diseño</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Diseñadores en Scratch</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-paint-brush mr-2 text-pink-500"></i>
+                        Diseñadores en Scratch
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software enfocado en diseño de videojuegos con propósito ecológico y radio interactivo.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-pink-600 font-medium">ASOCIACIÓN</span>
-                        <a href="tutoriales/clase5.html" class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <span class="text-sm text-pink-600 font-medium flex items-center">
+                            <i class="fas fa-link mr-1"></i>
+                            ASOCIACIÓN
+                        </span>
+                        <a href="tutoriales/clase5.html" class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -151,20 +283,28 @@
 
             <!-- Clase 6 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-indigo-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">6</span>
+                            <i class="fas fa-lightbulb text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Ideas</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Ideas Brillantes</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-star mr-2 text-indigo-500"></i>
+                        Ideas Brillantes
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software para convertir pasiones en un negocio que ayude al planeta.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-indigo-600 font-medium">ASOCIACIÓN</span>
-                        <a href="tutoriales/clase6.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                        <span class="text-sm text-indigo-600 font-medium flex items-center">
+                            <i class="fas fa-link mr-1"></i>
+                            ASOCIACIÓN
+                        </span>
+                        <a href="tutoriales/clase6.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -173,20 +313,28 @@
 
             <!-- Clase 7 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-teal-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">7</span>
+                            <i class="fas fa-comments text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Opinión</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Tu Opinión Cuenta</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-users mr-2 text-teal-500"></i>
+                        Tu Opinión Cuenta
+                    </h4>
                     <p class="text-gray-600 mb-4">Finalización del Software creando mejores Apps y videojuegos con la ayuda de otras chicas.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-teal-600 font-medium">ASOCIACIÓN</span>
-                        <a href="tutoriales/clase7.html" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                        <span class="text-sm text-teal-600 font-medium flex items-center">
+                            <i class="fas fa-link mr-1"></i>
+                            ASOCIACIÓN
+                        </span>
+                        <a href="tutoriales/clase7.html" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -195,20 +343,28 @@
 
             <!-- Clase 8 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-red-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">8</span>
+                            <i class="fas fa-puzzle-piece text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Integración</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Integración con Propósito</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-cogs mr-2 text-red-500"></i>
+                        Integración con Propósito
+                    </h4>
                     <p class="text-gray-600 mb-4">Planificación del Software para diseñar un plan para crear clases creando el futuro fantástico.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-red-600 font-medium">ASOCIACIÓN</span>
-                        <a href="tutoriales/clase8.html" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                        <span class="text-sm text-red-600 font-medium flex items-center">
+                            <i class="fas fa-link mr-1"></i>
+                            ASOCIACIÓN
+                        </span>
+                        <a href="tutoriales/clase8.html" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -217,20 +373,28 @@
 
             <!-- Clase 9 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-yellow-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">9</span>
+                            <i class="fas fa-hammer text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Desarrollo</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Desarrolladores en Acción</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-tools mr-2 text-yellow-500"></i>
+                        Desarrolladores en Acción
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software construyendo Apps de ensueño y creando videojuegos educativos.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-yellow-600 font-medium">EXPRESIÓN</span>
-                        <a href="tutoriales/clase9.html" class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
+                        <span class="text-sm text-yellow-600 font-medium flex items-center">
+                            <i class="fas fa-paint-brush mr-1"></i>
+                            EXPRESIÓN
+                        </span>
+                        <a href="tutoriales/clase9.html" class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -239,20 +403,28 @@
 
             <!-- Clase 10 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-cyan-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">10</span>
+                            <i class="fas fa-gamepad text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Videojuegos</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Videojuegos que Conectan</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-heart mr-2 text-cyan-500"></i>
+                        Videojuegos que Conectan
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software creando videojuegos que conectan con la familia y convierten en una estrella.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-cyan-600 font-medium">EXPRESIÓN</span>
-                        <a href="tutoriales/clase10.html" class="bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition-colors">
+                        <span class="text-sm text-cyan-600 font-medium flex items-center">
+                            <i class="fas fa-paint-brush mr-1"></i>
+                            EXPRESIÓN
+                        </span>
+                        <a href="tutoriales/clase10.html" class="bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -261,20 +433,28 @@
 
             <!-- Clase 11 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-emerald-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">11</span>
+                            <i class="fas fa-leaf text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Ecología</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Evidencia Ecológica</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-globe-americas mr-2 text-emerald-500"></i>
+                        Evidencia Ecológica
+                    </h4>
                     <p class="text-gray-600 mb-4">Desarrollo del Software usando las lenguas e ideas cuidas al planeta.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-emerald-600 font-medium">EXPRESIÓN</span>
-                        <a href="tutoriales/clase11.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                        <span class="text-sm text-emerald-600 font-medium flex items-center">
+                            <i class="fas fa-paint-brush mr-1"></i>
+                            EXPRESIÓN
+                        </span>
+                        <a href="tutoriales/clase11.html" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -283,20 +463,58 @@
 
             <!-- Clase 12 -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-violet-400 to-violet-600 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <div class="h-48 bg-gradient-to-br from-violet-400 to-violet-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-violet-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
                         <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span class="text-2xl font-bold">12</span>
+                            <i class="fas fa-trophy text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold">Presentación</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">La Idea Una Oro</h4>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-crown mr-2 text-violet-500"></i>
+                        La Idea Una Oro
+                    </h4>
                     <p class="text-gray-600 mb-4">Finalización del Software presentando las herramientas y habilidades fantásticas.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-violet-600 font-medium">EXPRESIÓN</span>
-                        <a href="tutoriales/clase12.html" class="bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 transition-colors">
+                        <span class="text-sm text-violet-600 font-medium flex items-center">
+                            <i class="fas fa-paint-brush mr-1"></i>
+                            EXPRESIÓN
+                        </span>
+                        <a href="tutoriales/clase12.html" class="bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
+                            Ver Tutorial
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clase 13 -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div class="h-48 bg-gradient-to-br from-amber-400 to-yellow-600 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-amber-500 opacity-10"></div>
+                    <div class="text-white text-center relative z-10">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-dollar-sign text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Monetización</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-coins mr-2 text-amber-500"></i>
+                        Monetizar con Scratch
+                    </h4>
+                    <p class="text-gray-600 mb-4">Aprende estrategias y métodos para generar ingresos con tus habilidades de programación en Scratch.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-amber-600 font-medium flex items-center">
+                            <i class="fas fa-chart-line mr-1"></i>
+                            MONETIZACIÓN
+                        </span>
+                        <a href="tutoriales/clase13.html" class="bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors flex items-center">
+                            <i class="fas fa-book-open mr-2"></i>
                             Ver Tutorial
                         </a>
                     </div>
@@ -307,21 +525,81 @@
         <!-- Footer Info -->
         <div class="mt-16 text-center">
             <div class="bg-white rounded-xl shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Sobre el Programa</h3>
-                <p class="text-gray-600 max-w-4xl mx-auto">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg mr-4">
+                        <div class="text-white font-bold text-xl">ECO</div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold gradient-text mb-2">Sobre el Programa</h3>
+                        <div class="flex items-center justify-center text-gray-500">
+                            <i class="fas fa-code mr-2"></i>
+                            <span>Programación + Ecología</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 max-w-4xl mx-auto leading-relaxed">
                     Este cronograma detallado de ejecución está diseñado para guiar a los estudiantes a través de un viaje 
                     completo de aprendizaje en programación con Scratch. Cada clase combina teoría y práctica, 
                     fomentando la creatividad, el pensamiento lógico y la conciencia ambiental.
                 </p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-users text-blue-500 text-2xl mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold">Colaborativo</h4>
+                            <p class="text-sm text-gray-500">Aprendizaje en equipo</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-leaf text-green-500 text-2xl mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold">Ecológico</h4>
+                            <p class="text-sm text-gray-500">Conciencia ambiental</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-rocket text-purple-500 text-2xl mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold">Innovador</h4>
+                            <p class="text-sm text-gray-500">Tecnología del futuro</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-xl font-bold mb-2">Centro de Interés ECOTECH</h3>
-            <p class="text-gray-400">Formando programadores del futuro con conciencia ambiental</p>
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg mr-4">
+                        <div class="text-white font-bold text-sm">ECO</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Centro de Interés ECOTECH</h3>
+                        <p class="text-gray-400">Formando programadores del futuro con conciencia ambiental</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center text-gray-300">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>12 Clases</span>
+                    </div>
+                    <div class="flex items-center text-gray-300">
+                        <i class="fas fa-users mr-2"></i>
+                        <span>Colaborativo</span>
+                    </div>
+                    <div class="flex items-center text-gray-300">
+                        <i class="fas fa-leaf mr-2"></i>
+                        <span>Ecológico</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 Centro de Interés ECOTECH. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 </body>

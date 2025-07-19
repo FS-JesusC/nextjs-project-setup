@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 13: Monetizar con Scratch - Tutorial ECOTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .logo-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .money-block {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: white;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al Inicio
+                </a>
+                <div class="flex items-center text-sm text-gray-500">
+                    <div class="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-2">
+                        <div class="text-white font-bold text-xs">E</div>
+                    </div>
+                    Clase 13 de 13
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-amber-400 to-yellow-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-dollar-sign text-3xl"></i>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Monetizar con Scratch</h1>
+            <p class="text-xl opacity-90">Estrategias para generar ingresos con tus habilidades de programación</p>
+            <div class="mt-6 inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                <span class="text-sm font-medium">Fase: MONETIZACIÓN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Objetivo -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-target text-amber-600"></i>
+                </div>
+                Objetivo de la Clase
+            </h2>
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg">
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Al finalizar esta clase, los estudiantes conocerán diversas estrategias y métodos para monetizar 
+                    sus habilidades de programación en Scratch, desde la enseñanza hasta la creación de contenido 
+                    y servicios profesionales. Aprenderán a convertir su pasión por la programación en oportunidades de ingresos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Materiales -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-briefcase text-green-600"></i>
+                </div>
+                Recursos Necesarios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Habilidades Desarrolladas:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span>Dominio de Scratch y programación visual</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span>Capacidad de enseñanza y comunicación</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span>Creatividad para desarrollar proyectos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-800 mb-3">Herramientas Adicionales:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Plataformas de enseñanza online</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Redes sociales y marketing digital</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>Herramientas de grabación y edición</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estrategias de Monetización -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-coins text-amber-600"></i>
+                </div>
+                Estrategias de Monetización
+            </h2>
+
+            <!-- Estrategia 1: Enseñanza -->
+            <div class="mb-8 border-l-4 border-blue-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">1. Enseñanza y Tutorías</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-3">Oportunidades de Enseñanza:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-blue-600 mb-2">Clases Particulares</h5>
+                            <p class="text-sm text-gray-600">Ofrece tutorías personalizadas presenciales o virtuales</p>
+                            <span class="money-block text-xs">$15-50/hora</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-green-600 mb-2">Cursos Online</h5>
+                            <p class="text-sm text-gray-600">Crea cursos en plataformas como Udemy, Coursera</p>
+                            <span class="money-block text-xs">$50-200/curso</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-purple-600 mb-2">Talleres Grupales</h5>
+                            <p class="text-sm text-gray-600">Organiza talleres en escuelas o centros comunitarios</p>
+                            <span class="money-block text-xs">$200-500/taller</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-orange-600 mb-2">Campamentos</h5>
+                            <p class="text-sm text-gray-600">Campamentos de programación durante vacaciones</p>
+                            <span class="money-block text-xs">$300-800/semana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estrategia 2: Contenido Digital -->
+            <div class="mb-8 border-l-4 border-green-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">2. Creación de Contenido Digital</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Plataformas de Contenido:</h4>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                            <div>
+                                <h5 class="font-medium text-red-600">YouTube</h5>
+                                <p class="text-sm text-gray-600">Tutoriales, proyectos paso a paso</p>
+                            </div>
+                            <span class="money-block text-xs">Monetización por vistas</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                            <div>
+                                <h5 class="font-medium text-blue-600">Blog/Website</h5>
+                                <p class="text-sm text-gray-600">Artículos, recursos descargables</p>
+                            </div>
+                            <span class="money-block text-xs">Publicidad + Afiliados</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                            <div>
+                                <h5 class="font-medium text-purple-600">Patreon</h5>
+                                <p class="text-sm text-gray-600">Contenido exclusivo para suscriptores</p>
+                            </div>
+                            <span class="money-block text-xs">$5-50/mes por suscriptor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estrategia 3: Servicios Profesionales -->
+            <div class="mb-8 border-l-4 border-purple-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">3. Servicios Profesionales</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Servicios que puedes ofrecer:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-indigo-600 mb-2">Desarrollo de Proyectos</h5>
+                            <p class="text-sm text-gray-600 mb-2">Crea juegos educativos personalizados para escuelas</p>
+                            <span class="money-block text-xs">$500-2000/proyecto</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-teal-600 mb-2">Consultoría Educativa</h5>
+                            <p class="text-sm text-gray-600 mb-2">Asesoría para implementar Scratch en currículos</p>
+                            <span class="money-block text-xs">$100-300/hora</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-pink-600 mb-2">Capacitación Docente</h5>
+                            <p class="text-sm text-gray-600 mb-2">Entrena a profesores en el uso de Scratch</p>
+                            <span class="money-block text-xs">$1000-3000/programa</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-medium text-red-600 mb-2">Eventos y Conferencias</h5>
+                            <p class="text-sm text-gray-600 mb-2">Presenta en eventos educativos y tecnológicos</p>
+                            <span class="money-block text-xs">$500-1500/evento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estrategia 4: Productos Digitales -->
+            <div class="mb-8 border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">4. Productos Digitales</h3>
+                <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                    <h4 class="font-semibold mb-4">Productos que puedes crear:</h4>
+                    <div class="space-y-3">
+                        <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                            <div>
+                                <h5 class="font-medium text-blue-600">Plantillas de Proyectos</h5>
+                                <p class="text-sm text-gray-600">Proyectos base para diferentes niveles</p>
+                            </div>
+                            <span class="money-block text-xs">$10-50/plantilla</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                            <div>
+                                <h5 class="font-medium text-green-600">Guías y eBooks</h5>
+                                <p class="text-sm text-gray-600">Manuales completos de programación</p>
+                            </div>
+                            <span class="money-block text-xs">$20-100/guía</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg flex items-center justify-between">
+                            <div>
+                                <h5 class="font-medium text-purple-600">Recursos Educativos</h5>
+                                <p class="text-sm text-gray-600">Actividades y ejercicios para docentes</p>
+                            </div>
+                            <span class="money-block text-xs">$15-75/paquete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan de Acción -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-rocket text-blue-600"></i>
+                </div>
+                Plan de Acción para Empezar
+            </h2>
+
+            <div class="space-y-6">
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-3">Paso 1: Construye tu Portafolio</h3>
+                    <ul class="text-blue-700 space-y-2 text-sm">
+                        <li>• Crea 5-10 proyectos diversos en Scratch</li>
+                        <li>• Documenta cada proyecto con explicaciones claras</li>
+                        <li>• Publica tus proyectos en la comunidad de Scratch</li>
+                        <li>• Crea un sitio web personal mostrando tu trabajo</li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
+                    <h3 class="font-semibold text-green-800 mb-3">Paso 2: Desarrolla tu Marca Personal</h3>
+                    <ul class="text-green-700 space-y-2 text-sm">
+                        <li>• Define tu nicho (educación, juegos, arte digital, etc.)</li>
+                        <li>• Crea perfiles profesionales en redes sociales</li>
+                        <li>• Comparte contenido regularmente</li>
+                        <li>• Conecta con la comunidad educativa y tecnológica</li>
+                    </ul>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-lg">
+                    <h3 class="font-semibold text-purple-800 mb-3">Paso 3: Comienza con Servicios Pequeños</h3>
+                    <ul class="text-purple-700 space-y-2 text-sm">
+                        <li>• Ofrece tutorías a amigos y familiares</li>
+                        <li>• Crea tu primer curso online gratuito</li>
+                        <li>• Participa en eventos locales de tecnología</li>
+                        <li>• Colabora con escuelas de tu comunidad</li>
+                    </ul>
+                </div>
+
+                <div class="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg">
+                    <h3 class="font-semibold text-orange-800 mb-3">Paso 4: Escala tu Negocio</h3>
+                    <ul class="text-orange-700 space-y-2 text-sm">
+                        <li>• Automatiza procesos repetitivos</li>
+                        <li>• Crea productos digitales escalables</li>
+                        <li>• Forma un equipo si es necesario</li>
+                        <li>• Diversifica tus fuentes de ingresos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejos -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-lightbulb text-yellow-600"></i>
+                </div>
+                Consejos para el Éxito
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">✅ Mejores Prácticas</h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>• Mantén la calidad por encima de la cantidad</li>
+                            <li>• Escucha feedback de tus estudiantes/clientes</li>
+                            <li>• Mantente actualizado con nuevas funciones</li>
+                            <li>• Construye relaciones a largo plazo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎯 Estrategias de Marketing</h3>
+                        <ul class="text-blue-700 space-y-2 text-sm">
+                            <li>• Usa testimonios y casos de éxito</li>
+                            <li>• Ofrece contenido gratuito de valor</li>
+                            <li>• Colabora con otros educadores</li>
+                            <li>• Participa en comunidades online</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg">
+                <h3 class="font-semibold text-amber-800 mb-3">💰 Reflexión Final sobre Monetización</h3>
+                <p class="text-amber-700">
+                    Recuerda que monetizar tus habilidades en Scratch no solo se trata de generar ingresos, 
+                    sino de crear valor real para otros. Enfócate en ayudar a las personas a aprender y crear, 
+                    y los ingresos seguirán naturalmente. ¡Tu pasión por la programación puede convertirse en 
+                    una carrera gratificante y lucrativa!
+                </p>
+            </div>
+        </section>
+
+        <!-- Recursos Adicionales -->
+        <section class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-external-link-alt text-amber-600"></i>
+                </div>
+                Recursos para Monetización
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="font-semibold mb-4">Plataformas de Enseñanza:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Udemy:</strong> Cursos online masivos</li>
+                        <li>• <strong>Skillshare:</strong> Clases creativas</li>
+                        <li>• <strong>Teachable:</strong> Tu propia escuela online</li>
+                        <li>• <strong>Zoom:</strong> Clases en vivo</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="font-semibold mb-4">Herramientas de Marketing:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• <strong>Canva:</strong> Diseño gráfico</li>
+                        <li>• <strong>Mailchimp:</strong> Email marketing</li>
+                        <li>• <strong>Buffer:</strong> Gestión de redes sociales</li>
+                        <li>• <strong>Google Analytics:</strong> Análisis web</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="clase12.html" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Clase Anterior
+            </a>
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">Clase 13 de 13</p>
+                <div class="w-48 bg-gray-200 rounded-full h-2 mt-2">
+                    <div class="bg-amber-600 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+            </div>
+            <a href="../index.html" class="bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-colors flex items-center">
+                <i class="fas fa-home mr-2"></i>
+                Finalizar Curso
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Centro de Interés ECOTECH - Clase 13: Monetizar con Scratch</p>
+        </div>
+    </footer>
+</body>
+</html>
